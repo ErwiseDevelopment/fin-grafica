@@ -53,53 +53,71 @@ get_header(); ?>
 			<div class="col-12">
 
 				<div class="row">
+					
+					<!-- loop -->
+					<?php
+						$args = array(
+							'posts_per_page' => -1,
+							'post_type'      => 'produtos',
+							'order'          => 'DESC'
+						);
 
-					<div class="col-lg-4 my-3 my-lg-0">
+						$products = new WP_Query( $args );
 
-						<div class="card border-0">
+						if( $products->have_posts() ) :
+							while( $products->have_posts() ) : $products->the_post();
+								$images = get_field( 'imagem_produto', get_the_ID() );
+					?>
+								<div class="col-lg-4 my-3 my-lg-0">
 
-							<div class="l-best-sellers__card-img card-img d-flex flex-column justify-content-center align-items-center">
+									<div class="card border-0">
 
-								<div class="card-img">
-									<img
-									class="img-fluid"
-									src="http://sal.grafica.erwisedev-hml.com.br/wp-content/uploads/2022/04/Embalagem-Xis-2A-165x165-cm-Duplex-300g-Automático-com-cola.png"
-									alt="">
-								</div>										
-							</div>
+										<?php if( $images ) : ?>
+											<div class="l-best-sellers__card-img card-img d-flex flex-column justify-content-center align-items-center">
 
-							<div class="card-body pb-0">
+												<div class="card-img">
+													<img
+													class="img-fluid"
+													src="<?php echo $images[0]['imagens_produto_todos']; ?>"
+													alt="<?php the_title() ?>">
+												</div>										
+											</div>
+										<?php endif; ?>
 
-								<p class="l-best-sellers__card-title u-font-weight-bold u-color-folk-theme">
-									Embalagem Xis
-								</p>
+										<div class="card-body pb-0">
 
-								<span class="l-best-sellers__card-description d-block">
+											<p class="l-best-sellers__card-title u-font-weight-bold u-color-folk-theme">
+												<!-- Embalagem Xis -->
+												<?php the_title() ?>
+											</p>
 
-									<p>
-										Impressão Off Set Alta Qualidade <br>
-										Cores: 4×0 <br>
-										Papel Duplex 300g <br>
-										Formato: 165×165 cm
-									</p>
-								</span>
-							</div>
+											<span class="l-best-sellers__card-description d-block">
+												<?php echo get_field( 'descricao_produto' ) ?>
+											</span>
+										</div>
 
-							<div class="card-footer border-0 u-bg-folk-none px-0">
+										<div class="card-footer border-0 u-bg-folk-none px-0">
 
-								<div class="row">
+											<div class="row">
 
-									<div class="col-lg-8">
-										<a 
-										class="l-blogs__read-more u-line-height-100 hover:u-opacity-8 d-block u-font-weight-bold text-center text-decoration-none u-color-folk-white u-bg-folk-primary py-3 px-5" 
-										href="http://sal.grafica.erwisedev-hml.com.br/solicitar-orcamento/?id=520">
-											+ Detalhes
-										</a>
+												<div class="col-lg-8">
+													<a 
+													class="l-blogs__read-more u-line-height-100 hover:u-opacity-8 d-block u-font-weight-bold text-center text-decoration-none u-color-folk-white u-bg-folk-primary py-3 px-5" 
+													href="<?php echo get_home_url( null, 'solicitar-orcamento/?id=' . get_the_ID() )  ?>">
+														Solicitar orçamento
+													</a>
+												</div>
+											</div>
+										</div>
 									</div>
 								</div>
-							</div>
-						</div>
-					</div>
+					<?php
+							endwhile;
+						endif;
+						
+						wp_reset_query();
+					?>
+					<!-- end loop -->
 				</div>
 			</div>
 		</div>

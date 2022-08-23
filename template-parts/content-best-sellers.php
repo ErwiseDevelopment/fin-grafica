@@ -84,7 +84,7 @@
 
                                                 <span class="l-best-sellers__card-description d-block">
                                                     <?php echo get_field( 'descricao_produto' ) ?>
-                                                </sp>
+                                                </span>
                                             </div>
 
                                             <div class="card-footer border-0 u-bg-folk-none px-0">
