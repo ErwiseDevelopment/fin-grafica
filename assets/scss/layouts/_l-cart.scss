@@ -1,0 +1,55 @@
+$layout-name: 'l-cart';
+
+.#{$layout-name} {
+    width: 130px;
+    height: 130px;
+    bottom: 8rem;
+    right: 0;
+    transform: translateX(100px);
+    transition: all .2s;
+    position: fixed;
+    background-color: $color-folk-primary;
+    cursor: pointer;
+    z-index: 999;
+
+    @media screen and (min-width: 1600px) {
+        width: 180px;
+        height: 180px;
+        bottom: 10rem;
+        transform: translateX(148px);
+    }
+
+    &.active,
+    &:hover {
+        transform: translateX(0);
+
+        &::before {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        span {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    &::before {
+        content: 'Orçamento';
+        top: 50%;
+        left: -30px;
+        transform: translateY(-50%) rotate(90deg);
+        transition: all .2s;
+        opacity: 1;
+        visibility: visible;
+        position: absolute;
+        font-weight: 700;
+        color: $color-folk-white;
+    }
+
+    span {
+        transition: all .2s;
+        opacity: 0;
+        visibility: hidden;
+    }
+}

@@ -1,0 +1,31 @@
+$layout-name: 'l-calendar';
+
+.#{$layout-name} {
+    &__date {
+        font-size: 2rem;
+
+        @media screen and (min-width: 1600px) {
+            font-size: 3rem;
+        }
+    }
+
+    &__title {
+        font-size: 1.375rem;
+
+        @media screen and (min-width: 1600px) {
+            font-size: 1.875rem;
+        }
+    }
+
+    &__text {
+        @media screen and (min-width: 1600px) {
+            font-size: 1.125rem;
+        }
+    }
+
+    &__btn {
+        @media screen and (min-width: 1600px) {
+            font-size: 1.3125rem;
+        }
+    }
+}

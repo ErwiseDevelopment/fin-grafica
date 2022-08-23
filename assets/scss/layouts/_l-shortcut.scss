@@ -1,0 +1,93 @@
+$layout-name: 'l-shortcut';
+
+.#{$layout-name} {
+    &__item {
+        border: 2px solid;
+
+        // &:nth-of-type(1) {
+        //     border-color: $color-folk-secondary !important;
+
+        //     * {
+        //         color: $color-folk-secondary !important;
+        //     }
+
+        //     &:hover {
+        //         background-color: $color-folk-secondary !important;
+        //     }
+        // }
+
+        // &:nth-of-type(2) {
+        //     border-color: $color-folk-purple !important;
+
+        //     * {
+        //         color: $color-folk-purple !important;
+        //     }
+
+        //     &:hover {
+        //         background-color: $color-folk-purple !important;
+        //     }
+        // }
+
+        // &:nth-of-type(3) {
+        //     border-color: $color-folk-primary !important;
+
+        //     * {
+        //         color: $color-folk-primary !important;
+        //     }
+
+        //     &:hover {
+        //         background-color: $color-folk-primary !important;
+        //     }
+        // }
+
+        // &:nth-of-type(4) {
+        //     border-color: $color-folk-cyan !important;
+
+        //     * {
+        //         color: $color-folk-cyan !important;
+        //     }
+
+        //     &:hover {
+        //         background-color: $color-folk-cyan !important;
+        //     }
+        // }
+
+        // &:nth-of-type(5) {
+        //     border-color: #70CE64;
+
+        //     * {
+        //         color: #70CE64 !important; 
+        //     }
+
+        //     &:hover {
+        //         background-color: #70CE64;
+        //     }
+        // }
+
+        // &:nth-of-type(6) {
+        //     border-color: #F94144;
+
+        //     * {
+        //         color: #F94144 !important;
+        //     }
+
+        //     &:hover {
+        //         background-color: #F94144;
+        //     }
+        // }
+
+        &:hover {
+            * {
+                color: $color-folk-white !important;
+            }
+        }
+    }
+
+    &__link {
+        //color: $color-folk-secondary !important;
+
+        @media screen and (min-width: 1600px) {
+            font-size: 1.3125rem;
+        }
+    }
+}

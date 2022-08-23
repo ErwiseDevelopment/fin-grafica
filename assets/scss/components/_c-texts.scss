@@ -1,0 +1,9 @@
+$component-name: 'c-text';
+
+.#{$component-name} {
+    &-pattern {
+        @media screen and (min-width: 1600px) {
+            font-size: 1.375rem;
+        }
+    }
+}

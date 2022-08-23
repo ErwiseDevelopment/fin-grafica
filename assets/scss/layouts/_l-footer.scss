@@ -1,0 +1,20 @@
+$layout-name: 'l-footer';
+
+.#{$layout-name} {
+    &__text {
+        * {
+            font-size: 1rem;
+            color: $color-folk-white;
+            
+            @media screen and (min-width: 1600px) {
+                font-size: 1.3125rem;
+            }
+        }
+    }
+
+    &__box-brand {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        box-shadow: 0 2px 5px rgba(11, 0, 0, .2);
+    }
+}

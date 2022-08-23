@@ -1,0 +1,7 @@
+$layout-name: 'u-line-height';
+
+.#{$layout-name} {
+    &-100 {
+        line-height: 100%;
+    }
+}

@@ -1,0 +1,15 @@
+$utility-name: 'u-border-color';
+
+.#{$utility-name} {
+    &-primary {
+        border-color: $color-folk-primary !important;
+    }
+    
+    &-secondary {
+        border-color: $color-folk-secondary !important;
+    }
+
+    &-theme {
+        border-color: $color-folk-theme !important;
+    }
+}

@@ -1,0 +1,18 @@
+$component-name: 'c-title';
+
+.#{$component-name} {
+    display: inline-flex;
+    font-size: 1.5rem;
+
+    @media screen and (min-width: 1600px) {
+        font-size: 2rem;
+    }
+
+    &__small {
+        font-size: 1.125rem;
+
+        @media screen and (min-width: 1600px) {
+            font-size: 1.625rem;
+        }
+    }
+}

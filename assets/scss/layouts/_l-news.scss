@@ -1,0 +1,133 @@
+$layout-name: 'l-news';
+
+.#{$layout-name} {
+    &__text {
+        @media screen and (min-width: 1600px) {
+            font-size: 1.375rem;
+        }
+    }
+
+    &__highlight {
+        &__card-relevance {
+            font-size: 1.5rem;
+            
+            @media screen and (min-width: 1600px) {
+                font-size: 1.875rem;
+            }
+
+            @media screen and (max-width: 991px) {
+                font-size: 1.125rem;
+            }
+        }
+
+        &__card-title {
+            font-size: 1.875rem;
+            
+            @media screen and (min-width: 1600px) {
+                font-size: 2.4375rem;
+            }
+
+            @media screen and (max-width: 991px) {
+                font-size: 1.375rem;
+            }
+        }
+    
+        &__card-info {
+            font-size: 1rem;
+
+            @media screen and (min-width: 1600px) {
+                font-size: 1.1875rem;
+            }
+            
+            @media screen and (max-width: 991px) {
+                font-size: .75rem;
+            }
+        }
+    
+        &__card-excerpt {
+            font-size: 1rem;
+
+            @media screen and (min-width: 1600px) {
+                font-size: 1.1875rem;
+            }
+
+            @media screen and (max-width: 991px) {
+                font-size: .75rem;
+            }
+        }
+
+        &__card-read-more {
+            @media screen and (min-width: 1600px) {
+                font-size: 1.25rem;
+            }
+        }
+    }
+
+    &__medium {
+        &__card-img {
+            height: 280px;
+        }
+
+        &__card-relevance {
+            font-size: 1.125rem;
+
+            @media screen and (min-width: 1600px) {
+                font-size: 1.5rem;
+            }
+        }
+
+        &__card-title {
+            font-size: 1.125rem;
+
+            @media screen and (min-width: 1600px) {
+                font-size: 1.625rem;
+            }
+        }
+    
+        &__card-info {
+            font-size: 1rem;
+
+            @media screen and (min-width: 1600px) {
+                font-size: 1.1875rem;
+            }
+        }
+
+        &__card-read-more {
+            @media screen and (min-width: 1600px) {
+                font-size: 1.25rem;
+            }
+        }
+    }
+
+    &__small {
+        &__card-relevance {
+            font-size: 1rem;
+
+            @media screen and (min-width: 1600px) {
+                font-size: 1.25rem;
+            }
+        }
+
+        &__card-title {
+            font-size: .9375rem;
+
+            @media screen and (min-width: 1600px) {
+                font-size: 1.1875rem;
+            }
+        }
+    
+        &__card-info {
+            font-size: .8125rem;
+
+            @media screen and (min-width: 1600px) {
+                font-size: 1.0625rem;
+            }
+        }
+
+        &__card-read-more {
+            @media screen and (min-width: 1600px) {
+                font-size: 1.25rem;
+            }
+        }
+    }
+}

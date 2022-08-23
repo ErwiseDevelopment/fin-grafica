@@ -1,0 +1,51 @@
+$layout-name: 'l-other-posts';
+
+.#{$layout-name} {
+    &__col-border {
+        border-bottom: 2px solid $color-folk-secondary !important;
+
+        &:last-child {
+            border: 0 !important;
+        }
+    }
+
+    &__post-tag {
+        font-size: .9375rem;
+
+        @media screen and (min-width: 1600px) {
+            font-size: 1.25rem;
+        }
+    }
+
+    &__post-title {
+        font-size: 1.125rem;
+
+        @media screen and (min-width: 1600px) {
+            font-size: 1.5rem;
+        }
+    }
+
+    &__post-date {
+        font-size: .875rem;
+        
+        @media screen and (min-width: 1600px) {
+            font-size: 1.1875rem;
+        }
+    }
+
+    &__podcast-number {
+        font-size: 2.625rem;
+
+        @media screen and (min-width: 1600px) {
+            font-size: 3.5625rem;
+        }
+    }
+    
+    &__podcast-title {
+        font-size: 1rem;
+
+        @media screen and (min-width: 1600px) {
+            font-size: 1.1875rem;
+        }
+    }
+}

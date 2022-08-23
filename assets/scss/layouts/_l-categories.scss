@@ -1,0 +1,63 @@
+$layout-name: 'l-categories'; 
+
+.#{$layout-name} {
+    .format-standard {
+        width: 100%;
+        max-width: 100%;
+        flex: 0 0 100%;
+        margin: 1rem -1rem;
+        padding: 1rem;
+        border-bottom: 1px solid $color-folk-light-gray !important;
+        display: flex;
+        flex-wrap: wrap;
+
+        &:last-child {
+            border: 0 !important;
+        }
+
+        .post-thumbnail {
+            width: 100%;
+            max-width: 33.3%;
+            flex: 0 0 33.3%;
+            padding: 0 1rem;
+
+            @media screen and (max-width: 991px) {
+                max-width: 100%;
+                flex: 0 0 100%;
+            }
+
+            img {
+                width: 100%;
+                max-width: 100%;
+                height: auto;
+            }
+        }
+
+        .entry-header {
+            width: 100%;
+            max-width: 66.6%;
+            flex: 0 0 66.6%;
+            padding: 0 1rem;
+
+            @media screen and (max-width: 991px) {
+                max-width: 100%;
+                flex: 0 0 100%;
+            }
+        }
+
+        .entry-title {
+            &, 
+            * {
+                font-weight: 700;
+                color: #5B5B5B !important;
+            }
+        }
+
+        .entry-content {
+            p {
+                font-size: .875rem;
+                font-weight: 500;
+            }
+        }
+    }
+}

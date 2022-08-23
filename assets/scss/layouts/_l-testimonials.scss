@@ -1,0 +1,17 @@
+$layout-name: 'l-testimonials';
+
+.#{$layout-name} {
+    &__quote {
+        &::before {
+            font-size: 3rem;
+        }
+    }
+    
+    &__text {
+        font-size: 1.125rem;
+    }
+
+    &__date {
+        font-size: .9375rem;
+    }
+}

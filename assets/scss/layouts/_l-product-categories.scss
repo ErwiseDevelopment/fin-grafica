@@ -1,0 +1,13 @@
+$layout-name: 'l-product-categories';
+
+.#{$layout-name} { 
+    &__item {
+        transition: all .2s;
+        font-size: 1.25rem;
+        background-image: linear-gradient(to top, #F8961E, #FFB503);
+
+        &:hover {
+            background-image: linear-gradient(to top, #F8961E, #F8961E);
+        }
+    }
+}

@@ -1,0 +1,15 @@
+$component-name: 'c-input';
+
+.#{$component-name} {
+    &__search {
+        border: 1px solid #CCC !important;
+        outline: none;
+        color: #333;
+
+        &::placeholder {
+            font-size: .875rem;
+            font-weight: 500;
+            color: #333;
+        }
+    }
+}

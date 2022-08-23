@@ -1,0 +1,8 @@
+$layout-name: 'l-single-agenda';
+
+.#{$layout-name} {
+    &__banner {
+        height: 350px;
+        background-color: #7F7F7F;
+    }
+}

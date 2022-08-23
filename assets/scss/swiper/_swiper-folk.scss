@@ -1,0 +1,192 @@
+.swiper-button-prev-videos,
+.swiper-button-next-videos {
+    &::after {
+        font-size: 1.875rem;
+        font-weight: 900;
+        font-family: 'Montserrat', sans-serif;
+        color: $color-folk-secondary;
+    }
+}
+
+.swiper-button-prev-videos {
+    left: -1rem;
+
+    @media screen and (min-width: 1600px) {
+        left: -4rem;
+    }
+
+    @media screen and (max-width: 991px) {
+        top: 100%;
+        left: 8rem;
+    }
+
+    &::after {
+        content: '<';
+    }
+}
+
+.swiper-button-next-videos {
+    right: -1rem;
+    
+    @media screen and (min-width: 1600px) {
+        right: -4rem;
+    }
+
+    @media screen and (max-width: 991px) {
+        top: 100%;
+        right: 8rem;
+    }
+    
+    &::after {
+        content: '>';
+    }
+}
+
+.swiper-button-prev-calendar,
+.swiper-button-next-calendar {
+    &::after {
+        font-size: 1.875rem;
+        font-weight: 900;
+        font-family: 'Montserrat', sans-serif;
+        color: $color-folk-green;
+    }
+}
+
+.swiper-button-prev-calendar {
+    left: 1rem;
+
+    &::after {
+        content: '<';
+    }
+}
+
+.swiper-button-next-calendar {
+    right: 1rem;
+    
+    &::after {
+        content: '>';
+    }
+}
+
+.swiper-container-day {
+    .swiper-slide {
+        align-items: flex-start;
+    }
+}
+
+//about
+.swiper-button-prev-about,
+.swiper-button-next-about {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-folk-white;
+
+    @media screen and (max-width: 575px) {
+        top: 100%;
+    }
+
+    &::after {
+        font-size: 1.875rem;
+        font-weight: 900;
+        font-family: 'Montserrat', sans-serif;
+        color: $color-folk-primary;
+    }
+}
+
+.swiper-button-prev-about {
+    left: -5rem;
+
+    @media screen and (max-width: 575px) {
+        left: 5rem;
+    }
+
+    &::after {
+        content: '<';
+        
+    }
+}
+
+.swiper-button-next-about {
+    right: -5rem;
+
+    @media screen and (max-width: 575px) {
+        right: 5rem;
+    }
+    
+    &::after {
+        content: '>';
+    }
+}
+
+.swiper-button-prev-partners,
+.swiper-button-next-partners {
+    &::after {
+        font-size: 1.875rem;
+        font-weight: 900;
+        font-family: 'Montserrat', sans-serif;
+        color: $color-folk-primary;
+    }
+}
+
+.swiper-button-prev-partners {
+    left: -1rem;
+
+    @media screen and (min-width: 1600px) {
+        left: -4rem;
+    }
+
+    @media screen and (max-width: 991px) {
+        top: 100%;
+        left: 8rem;
+    }
+
+    &::after {
+        content: '<';
+    }
+}
+
+.swiper-button-next-partners {
+    right: -1rem;
+    
+    @media screen and (min-width: 1600px) {
+        right: -4rem;
+    }
+
+    @media screen and (max-width: 991px) {
+        top: 100%;
+        right: 8rem;
+    }
+    
+    &::after {
+        content: '>';
+    }
+}
+
+//best sellers
+.swiper-button-prev-best-sellers {
+    left: -3rem;
+}
+
+.swiper-button-next-best-sellers {
+    right: -3rem;
+}
+
+.swiper-button-prev-best-sellers,
+.swiper-button-next-best-sellers {
+    @media screen and (max-width: 991px) {
+        width: 100%;
+        height: 50px;
+        position: unset !important;
+    }
+}
+
+.swiper-button-prev-show-products {
+    left: 28%;
+}
+
+.swiper-button-next-show-products {
+    right: 28%;
+}

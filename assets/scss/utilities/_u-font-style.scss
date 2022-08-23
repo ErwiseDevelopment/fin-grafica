@@ -1,0 +1,7 @@
+$utility-name: 'u-font-style';
+
+.#{$utility-name} {
+    &-italic {
+        font-style: italic !important;
+    }
+}

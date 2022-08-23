@@ -1,0 +1,7 @@
+$utility-name: 'u-bgi-folk';
+
+.#{$utility-name} {
+    &-orange {
+        background-image: linear-gradient(to top, #F8961E, #FFB503);
+    }
+}

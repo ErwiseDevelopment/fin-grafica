@@ -1,0 +1,81 @@
+$layout-name: 'l-digital';
+
+.#{$layout-name} {
+    &__title-primary {
+        font-size: 1.125rem;
+
+        @media screen and (min-width: 1600px) {
+            font-size: 1.5rem;
+        }
+    }
+
+    &__title-secondary {
+        font-size: .9375rem;
+
+        @media screen and (min-width: 1600px) {
+            font-size: 1.125rem;
+        }
+    }
+
+    &__book {
+        &__tag {
+            font-size: 1.125rem;
+        }
+
+        &__title {
+            font-size: 1.375rem;
+
+            @media screen and (min-width: 1600px) {
+                font-size: 1.875rem;
+            }
+        }
+
+        &__description {
+            font-size: .8125rem;
+
+            @media screen and (min-width: 1600px) {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    &__download {
+        @media screen and (min-width: 1600px) {
+            font-size: 1.25rem;
+        }
+    }
+
+    &__inspector {
+        &__tag {
+            font-size: .875rem;
+
+            @media screen and (min-width: 1600px) {
+                font-size: 1.1875rem;
+            }
+        }
+
+        &__date {
+            font-size: .875rem;
+
+            @media screen and (min-width: 1600px) {
+                font-size: 1.1875rem;
+            }
+        }
+
+        &__description {
+            line-height: 100%;
+            
+            @media screen and (min-width: 1600px) {
+                font-size: 1.125rem;
+            }
+        }
+
+        &__link {
+            font-size: .875rem;
+
+            @media screen and (min-width: 1600px) {
+                font-size: 1.125rem;
+            }
+        }
+    }
+}

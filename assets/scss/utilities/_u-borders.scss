@@ -1,0 +1,29 @@
+$utility-name: 'u-border';
+
+.#{$utility-name} {
+    &-2 {
+        border: 2px solid !important; 
+    }
+
+    &-top {
+        &-2 {
+            border-top: 2px solid;
+        }
+    }
+
+    &-bottom {
+        &-2 {
+            border-bottom: 2px solid;
+        }
+    }
+}
+
+.last-child\: {
+    &#{$utility-name} {
+        &-none {
+            &:last-child {
+                border: 0 !important;
+            }
+        }
+    }
+}

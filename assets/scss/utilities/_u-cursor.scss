@@ -1,0 +1,7 @@
+$utility-name: 'u-cursor';
+
+.#{$utility-name} {
+    &-pointer {
+        cursor: pointer !important;
+    }
+}

@@ -1,0 +1,64 @@
+$layout-name: 'l-navbar';
+
+.#{$layout-name} {
+    .nav-item {
+        margin: 0 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media screen and (max-width: 991px) {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    .nav-link {
+        line-height: 100%;
+        position: relative;
+        font-weight: 600;
+        color: $color-folk-white !important;
+
+        @media screen and (max-width: 991px) {
+            text-align: center;
+            color: $color-folk-primary !important;
+        }
+
+        &::before {
+            content: '';
+            width: 20%;
+            height: 2px;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: all .2s;
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            background-color: $color-folk-white;
+        }
+
+        &:hover {
+            &::before {
+                width: calc(100% - 16px);
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+
+    .navbar-toggler {
+        outline: none !important;
+    }
+
+    &__hamburger {
+         
+        &::before {
+            content: '\f0c9';
+            font-size: 2rem;
+            font-weight: 900;
+            font-family: 'Font Awesome 5 Free';
+            color: $color-folk-black;
+        }
+    }
+}

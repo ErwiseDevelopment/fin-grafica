@@ -1,0 +1,32 @@
+$layout-name: 'l-page-agenda';
+
+.#{$layout-name} {
+    &__select {
+        padding: .5rem 1rem;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+        border: 1px solid #CCC;
+        font-size: .875rem;
+        
+        &:focus-visible {
+            outline: none;
+            border-color: $color-folk-primary;
+        }
+    }
+    
+    &__card {
+        transition: all .2s;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+
+        &:hover {
+            background-color: rgba(0, 0, 0, .1);
+        }
+    }
+
+    &__date {
+        font-size: 2rem;
+    }
+
+    &__post-title {
+        font-size: 1.25rem;
+    }
+}

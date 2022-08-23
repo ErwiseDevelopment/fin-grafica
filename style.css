@@ -1,0 +1,49 @@
+/*
+Theme Name: WP Bootstrap Starter Child
+Theme URI: https://afterimagedesigns.com/wp-bootstrap-starter/
+Author: Fabio Messias
+Author URI: https://afterimagedesigns.com/
+Description:  WP Bootstrap Starter Child
+Version: 1.0.0
+Template: wp-bootstrap-starter
+License URI: LICENSE
+Text Domain: wp-bootstrap-starter-child
+*/
+@media screen and (min-width: 1600px) {
+	.l-blogs__highlight__title {
+		font-size: 2.5rem;	
+	}
+	
+	.l-digital__book__title {
+		font-size: 1.5rem !important;
+	}
+}
+
+.l-modal-testimonials {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: all .6s;
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, .2);
+    z-index: 9999;
+}
+
+.l-modal-testimonials.active {
+	opacity: 1;
+	visibility: visible;
+}
+
+.l-modal-testimonials__box {
+	border-radius: 10px;
+}
+
+.l-modal-testimonials__btn-close {        
+	border-radius: 10px;
+}

@@ -1,0 +1,7 @@
+$utility-name: 'u-outline';
+
+.#{$utility-name} {
+    &-none {
+        outline: none !important;
+    }
+}

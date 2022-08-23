@@ -1,0 +1,11 @@
+$layout-name: 'l-best-sellers';
+
+.#{$layout-name} {
+    &__card-img {
+        border: 7px solid $color-folk-theme;
+    }
+
+    &__card-title {
+        font-size: 1.375rem;
+    }
+}

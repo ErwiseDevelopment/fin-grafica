@@ -1,0 +1,45 @@
+$layout-name: 'l-most-read';
+
+.#{$layout-name} {
+    &__title-line {
+        &::before {
+            content: '';
+            width: calc(100% + 1000px);
+            height: 2px;
+            top: 50%;
+            right: 100%;
+            transform: translateY(-50%);
+            position: absolute;
+            background-color: $color-folk-primary;
+        }
+    }
+
+    &__post-link {
+        &::before {
+            content: '';
+            width: 3px;
+            height: 100%;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            position: absolute;
+            background-color: $color-folk-theme;
+        }
+    }
+
+    &__post-title {
+        font-size: .875rem;
+
+        @media screen and (min-width: 1600px) {
+            font-size: 1.125rem;
+        }
+    }
+
+    &__post-content {
+        font-size: .875rem;
+
+        @media screen and (min-width: 1600px) {
+            font-size: 1.125rem;
+        }
+    }
+}

@@ -1,0 +1,11 @@
+$layout-name: 'l-contact';
+
+.#{$layout-name} {
+    &__btn-submit {
+        font-size: 1.125rem;
+        
+        @media screen and (min-width: 1600px) {
+            font-size: 1.625rem;
+        }
+    }
+}

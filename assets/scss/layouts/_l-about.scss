@@ -1,0 +1,65 @@
+$layout-name: 'l-about';
+
+.#{$layout-name} {
+    &__triangle {
+        &::before {
+            content: '';
+            width: 192px;
+            height: 192px;
+            top: 0;
+            left: 0;
+            position: absolute;
+            background-image: linear-gradient(-45deg, transparent 50%, $color-folk-theme 50%);
+        }
+
+        &::after {
+            content: '';
+            width: 90px;
+            height: 90px;
+            top: 10px;
+            left: 10px;
+            position: absolute;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+
+    &__title {
+        font-size: 2.125rem;
+
+        @media screen and (min-width: 1600px) {
+            font-size: 2.75rem;
+        }
+    }
+    
+    &__content {
+        line-height: 120%;
+        font-size: 1.25rem;
+        
+        @media screen and (min-width: 1600px) {
+            font-size: 1.375rem;
+        }
+    }
+
+    &__localization {
+        line-height: 100%;
+        font-size: 1.125rem;
+
+        @media screen and (min-width: 1600px) {
+            font-size: 1.5rem;
+        }
+    }
+
+    &__state {
+        font-size: 1rem;
+        
+        @media screen and (min-width: 1600px) {
+            font-size: 1.25rem;
+        }
+    }
+
+    // &__box-state {
+    //     border: 4px solid $color-folk-white;
+    //     border-radius: 4px;
+    // }
+}

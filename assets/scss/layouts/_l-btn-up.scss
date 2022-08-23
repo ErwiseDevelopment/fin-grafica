@@ -1,0 +1,27 @@
+$layout-name: 'l-btn-up';
+
+.#{$layout-name} {
+    width: 130px;
+    height: 60px;
+    bottom: 3rem;
+    right: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+
+    @media screen and (min-width: 1600px) {
+        width: 180px;
+        height: 100px;
+    }
+
+    span {
+        font-size: 3.125rem;
+
+        @media screen and (min-width: 1600px) {
+            font-size: 4.375rem;
+        }
+    }
+}

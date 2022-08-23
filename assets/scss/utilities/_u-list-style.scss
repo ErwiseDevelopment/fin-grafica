@@ -1,0 +1,7 @@
+$utility-name: 'u-list-style';
+
+.#{$utility-name} {
+    &-none {
+        list-style: none !important;
+    }
+}

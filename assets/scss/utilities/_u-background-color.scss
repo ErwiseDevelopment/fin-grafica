@@ -1,0 +1,101 @@
+$utility-name: 'u-bg-folk';
+
+.#{$utility-name} {
+    &-blue {
+        background-color: $color-folk-blue !important;
+    }
+    
+    &-cyan {
+        background-color: $color-folk-cyan !important;
+    }
+
+    &-dark-blue {
+        background-color: $color-folk-dark-blue !important;
+    }
+
+    &-green {
+        background-color: $color-folk-green !important;
+    }
+
+    &-none {
+        background: none !important;
+    }
+    
+    &-orange {
+        background-color: $color-folk-orange !important;
+    }
+
+    &-primary {
+        background-color: $color-folk-primary !important;
+    }
+
+    &-purple {
+        background-color: $color-folk-purple !important;
+    }
+
+    &-red {
+        background-color: $color-folk-red !important;
+    }
+
+    &-secondary {
+        background-color: $color-folk-secondary !important;
+    }
+
+    &-theme {
+        background-color: $color-folk-theme !important;
+    }
+
+    &-yellow {
+        background-color: $color-folk-yellow !important;
+    }
+
+    &-white {
+        background-color: $color-folk-white !important;
+    }
+}
+
+.md\: {
+    &#{$utility-name} {
+        &-none {  
+            @media screen and (min-width: 768px) {
+                background: none !important;
+            }
+        }
+    }
+}
+
+.lg\: {
+    &#{$utility-name} {
+        &-primary {
+            @media screen and (min-width: 992px) {
+                background-color: $color-folk-primary !important;
+            }
+        }
+    }
+}
+
+.before\:\: {
+    &#{$utility-name} {
+        &-green {
+            &::before {
+                background-color: $color-folk-green !important;
+            }
+        }
+    }
+}
+
+.hover\: {
+    &#{$utility-name} {
+        &-secondary {
+            &:hover {
+                background-color: $color-folk-secondary !important;
+            }
+        }
+
+        &-theme {
+            &:hover {
+                background-color: $color-folk-theme !important;
+            }
+        }
+    }
+}
