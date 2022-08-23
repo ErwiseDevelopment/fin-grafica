@@ -68,9 +68,19 @@ get_header(); ?>
 
 							$products = new WP_Query( $args );
 
-							echo '<pre>';
-							var_dump($products);
-							echo '</pre>';
+							if( $products->have_posts() ) :
+								while( $products->have_posts() ) : $products->the_post();
+									$image = get_field( 'imagem_produto', get_the_ID() );
+
+									echo '<pre>';
+									var_dump($image);
+									echo '</pre>';
+						?>
+						<?php
+								endwhile;
+							endif;
+
+							wp_reset_query();
 						?>
 					</div>
 				</div>
