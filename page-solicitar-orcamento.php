@@ -78,7 +78,7 @@ get_header(); ?>
 										src="<?php echo $images[0]['imagens_produto_todos']; ?>"
 										alt="<?php the_title() ?>">
 
-										<h3 class="u-font-weight-bold text-uppercase u-color-folk-theme mb-0">
+										<h3 class="u-font-weight-bold text-uppercase text-center u-color-folk-theme mb-0">
 											<?php the_title() ?>
 										</h5>
 						<?php
@@ -106,5 +106,5 @@ get_header(); ?>
 </section><!-- #primary -->
 
 <?php
-get_sidebar();
+
 get_footer();
