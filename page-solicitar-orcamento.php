@@ -106,7 +106,7 @@ get_header(); ?>
 			const title = document.querySelector( '.js-title' )
 			const field = document.querySelector( '.js-show-product-title' ) 
 
-			field.value = title
+			field.value = title.innerText
 		}
 	}, 1000)
 </script>
