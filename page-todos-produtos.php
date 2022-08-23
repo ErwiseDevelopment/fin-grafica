@@ -58,7 +58,7 @@ get_header(); ?>
 
 						<div class="card border-0">
 
-							<div class="l-best-sellers__card-img card-img d-flex justify-content-center align-items-center">
+							<div class="l-best-sellers__card-img card-img d-flex flex-column justify-content-center align-items-center">
 
 								<div class="card-img">
 									<img
@@ -89,7 +89,9 @@ get_header(); ?>
 									<div class="row">
 
 										<div class="col-lg-8">
-											<a class="l-blogs__read-more u-line-height-100 hover:u-opacity-8 d-block u-font-weight-bold text-center text-decoration-none u-color-folk-white u-bg-folk-primary py-3 px-5" href="http://sal.grafica.erwisedev-hml.com.br/solicitar-orcamento/?id=520">
+											<a 
+											class="l-blogs__read-more u-line-height-100 hover:u-opacity-8 d-block u-font-weight-bold text-center text-decoration-none u-color-folk-white u-bg-folk-primary py-3 px-5" 
+											href="http://sal.grafica.erwisedev-hml.com.br/solicitar-orcamento/?id=520">
 												+ Detalhes
 											</a>
 										</div>
