@@ -46,52 +46,43 @@ get_header(); ?>
 <!-- products -->
 <section>
 
-
 	<div class="container">
 
 		<div class="row">
 
 			<div class="col-12">
 
-					<div class="row">
+				<div class="row">
 
-						<div class="col-lg-4 my-3 my-lg-0">
+					<div class="col-lg-4 my-3 my-lg-0">
 
-							<div class="card border-0">
+						<div class="card border-0">
 
-								<div class="l-best-sellers__card-img card-img d-flex justify-content-center align-items-center">
+							<div class="l-best-sellers__card-img card-img d-flex justify-content-center align-items-center">
 
-									<!-- swiper -->
+								<div class="card-img">
+									<img
+									class="img-fluid"
+									src="http://sal.grafica.erwisedev-hml.com.br/wp-content/uploads/2022/04/Embalagem-Xis-2A-165x165-cm-Duplex-300g-Automático-com-cola.png"
+									alt="">
+								</div>										
 
-										<div class="swiper-wrapper" style="transform: translate3d(-336px, 0px, 0px); transition-duration: 0ms;">
-											<div class="swiper-slide swiper-slide-duplicate swiper-slide-prev swiper-slide-duplicate-next" data-swiper-slide-index="1" style="width: 336px;">
-												<img class="img-fluid" src="http://sal.grafica.erwisedev-hml.com.br/wp-content/uploads/2022/04/Embalagem-Xis-2B-165x165-cm-Duplex-300g-Automático-com-cola-1.png" alt="Embalagem Xis">
-											</div>
+								<div class="card-body pb-0">
 
-											<!-- loop -->
-											<div class="swiper-slide swiper-slide-active" data-swiper-slide-index="0" style="width: 336px;">
-												<img class="img-fluid" src="http://sal.grafica.erwisedev-hml.com.br/wp-content/uploads/2022/04/Embalagem-Xis-2A-165x165-cm-Duplex-300g-Automático-com-cola.png" alt="Embalagem Xis">
-											</div>
-											<!-- end loop -->
-											<!-- end swiper -->
-										</div>
+									<p class="l-best-sellers__card-title u-font-weight-bold u-color-folk-theme">
+										Embalagem Xis
+									</p>
 
-										<div class="card-body pb-0">
+									<span class="l-best-sellers__card-description d-block">
 
-											<p class="l-best-sellers__card-title u-font-weight-bold u-color-folk-theme">
-												Embalagem Xis
-											</p>
-
-											<span class="l-best-sellers__card-description d-block">
-
-												<p>
-													Impressão Off Set Alta Qualidade <br>
-													Cores: 4×0 <br>
-													Papel Duplex 300g <br>
-													Formato: 165×165 cm
-												</p>
-											</span>
-										</div>
+										<p>
+											Impressão Off Set Alta Qualidade <br>
+											Cores: 4×0 <br>
+											Papel Duplex 300g <br>
+											Formato: 165×165 cm
+										</p>
+									</span>
+								</div>
 
 								<div class="card-footer border-0 u-bg-folk-none px-0">
 
@@ -104,9 +95,10 @@ get_header(); ?>
 										</div>
 									</div>
 								</div>
-								</div>
+							</div>
 						</div>
 					</div>
+				</div>
 			</div>
 		</div>
 	</div>
