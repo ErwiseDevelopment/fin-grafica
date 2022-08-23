@@ -66,35 +66,35 @@ get_header(); ?>
 									src="http://sal.grafica.erwisedev-hml.com.br/wp-content/uploads/2022/04/Embalagem-Xis-2A-165x165-cm-Duplex-300g-Automático-com-cola.png"
 									alt="">
 								</div>										
+							</div>
 
-								<div class="card-body pb-0">
+							<div class="card-body pb-0">
 
-									<p class="l-best-sellers__card-title u-font-weight-bold u-color-folk-theme">
-										Embalagem Xis
+								<p class="l-best-sellers__card-title u-font-weight-bold u-color-folk-theme">
+									Embalagem Xis
+								</p>
+
+								<span class="l-best-sellers__card-description d-block">
+
+									<p>
+										Impressão Off Set Alta Qualidade <br>
+										Cores: 4×0 <br>
+										Papel Duplex 300g <br>
+										Formato: 165×165 cm
 									</p>
+								</span>
+							</div>
 
-									<span class="l-best-sellers__card-description d-block">
+							<div class="card-footer border-0 u-bg-folk-none px-0">
 
-										<p>
-											Impressão Off Set Alta Qualidade <br>
-											Cores: 4×0 <br>
-											Papel Duplex 300g <br>
-											Formato: 165×165 cm
-										</p>
-									</span>
-								</div>
+								<div class="row">
 
-								<div class="card-footer border-0 u-bg-folk-none px-0">
-
-									<div class="row">
-
-										<div class="col-lg-8">
-											<a 
-											class="l-blogs__read-more u-line-height-100 hover:u-opacity-8 d-block u-font-weight-bold text-center text-decoration-none u-color-folk-white u-bg-folk-primary py-3 px-5" 
-											href="http://sal.grafica.erwisedev-hml.com.br/solicitar-orcamento/?id=520">
-												+ Detalhes
-											</a>
-										</div>
+									<div class="col-lg-8">
+										<a 
+										class="l-blogs__read-more u-line-height-100 hover:u-opacity-8 d-block u-font-weight-bold text-center text-decoration-none u-color-folk-white u-bg-folk-primary py-3 px-5" 
+										href="http://sal.grafica.erwisedev-hml.com.br/solicitar-orcamento/?id=520">
+											+ Detalhes
+										</a>
 									</div>
 								</div>
 							</div>
