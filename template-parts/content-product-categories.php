@@ -47,6 +47,9 @@
                                 );
 
                                 foreach( $product_categories as $product_category ) :
+                                    echo '<pre>';
+                                    var_dump($product_category);
+                                    echo '</pre>';
                             ?>
                                     <div class="col-6 my-1">
 
