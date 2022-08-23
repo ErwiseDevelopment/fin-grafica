@@ -78,9 +78,9 @@ get_header(); ?>
 										src="<?php echo $images[0]['imagens_produto_todos']; ?>"
 										alt="<?php the_title() ?>">
 
-										<h2>
-											<?php the_title() ?>
-										</h2>
+										<h3 class="u-title u-font-weight-bold text-uppercase all:u-color-folk-theme mb-0">
+											<span class="u-title--highlight u-font-weight-black"><?php the_title() ?></span>
+										</h3>
 						<?php
 									endif;
 								endwhile;
@@ -90,7 +90,7 @@ get_header(); ?>
 						?>
 					</div>
 
-					<div class="col-lg-6 mt-4 mt-lg-0">
+					<div class="col-lg-8 mt-4 mt-lg-0">
 						<?php echo do_shortcode( '[contact-form-7 id="647" title="Solicitação"]' ); ?>
 					</div>
 				</div>
