@@ -52,7 +52,7 @@
 
                                         <a 
                                         class="l-product-categories__item d-block u-font-weight-semibold text-center text-decoration-none u-color-folk-white py-2"
-                                        href="<?php echo get_home_url( null, 'categoria-produto?cat=' . $product_category->term_id); ?>">
+                                        href="<?php echo get_home_url( null, 'categoria-produto?cat=' . $product_category->slug); ?>">
                                             <!-- // Folhetos -->
                                             <?php echo $product_category->name; ?>
                                         </a>
