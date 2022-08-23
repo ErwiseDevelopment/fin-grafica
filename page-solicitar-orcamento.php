@@ -70,13 +70,15 @@ get_header(); ?>
 
 							if( $products->have_posts() ) :
 								while( $products->have_posts() ) : $products->the_post();
-									$image = get_field( 'imagem_produto', get_the_ID() );
-
-									echo '<pre>';
-									var_dump($image);
-									echo '</pre>';
+									$images = get_field( 'imagem_produto', get_the_ID() );
+									if( $images ) :
 						?>
+										<img
+										class="img-fluid"
+										src="<?php echo $images[0]['imagens_produto_todos']; ?>"
+										alt="<?php the_title() ?>">
 						<?php
+									endif;
 								endwhile;
 							endif;
 
