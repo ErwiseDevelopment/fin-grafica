@@ -78,7 +78,7 @@ get_header(); ?>
 										src="<?php echo $images[0]['imagens_produto_todos']; ?>"
 										alt="<?php the_title() ?>">
 
-										<h3 class="u-font-weight-bold text-uppercase text-center u-color-folk-theme mb-0">
+										<h3 class="u-font-weight-bold text-uppercase text-center u-color-folk-theme mb-0 js-title">
 											<?php the_title() ?>
 										</h5>
 						<?php
@@ -98,7 +98,18 @@ get_header(); ?>
 		</div>
 	</div>
 </section>
-<!-- end content -->
+<!-- end content -->]
+
+<script>
+	setTimeout(function() {
+		if( document.querySelector( '.js-show-product-title' ) ) {
+			const title = document.querySelector( '.js-title' )
+			const field = document.querySelector( '.js-show-product-title' ) 
+
+			field.value = title
+		}
+	}, 1000)
+</script>
 
 <?php endwhile; ?>
 
