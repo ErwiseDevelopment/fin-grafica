@@ -46,19 +46,18 @@
                                     )
                                 );
 
-                                echo '<prev>';
-                                var_dump($product_categories);
-                                echo '</prev>';
+                                foreach( $product_categories as $product_category ) :
                             ?>
-                                        <div class="col-6 my-1">
+                                    <div class="col-6 my-1">
 
-                                            <a 
-                                            class="l-product-categories__item d-block u-font-weight-semibold text-center text-decoration-none u-color-folk-white py-2"
-                                            href="<?php echo get_sub_field( 'link' ) ?>">
-                                                <!-- // Folhetos -->
-                                                // <?php echo get_sub_field( 'categoria' ) ?>
-                                            </a>
-                                        </div>
+                                        <a 
+                                        class="l-product-categories__item d-block u-font-weight-semibold text-center text-decoration-none u-color-folk-white py-2"
+                                        href="<?php echo get_home_url( null, 'categoria-produto?cat=' . $product_category->id); ?>">
+                                            <!-- // Folhetos -->
+                                            <?php echo $product_category->name; ?>
+                                        </a>
+                                    </div>
+                            <?php endforeach; ?>
                             <!--   endwhile;
                                 endif;
                             -->
