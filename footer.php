@@ -71,7 +71,7 @@
                                 <div class="col-12 d-flex flex-column flex-md-row justify-content-between align-items-center my-4">
 
                                     <p class="u-font-weight-semibold text-center text-md-left u-color-folk-white mb-0">
-                                        @INSPETORIA SALESIANA SÃO PIO X 2020. TODOS OS DIREITOS RESERVADOS.
+                                        @INSPETORIA SALESIANA SÃO PIO X <?php echo date('Y'); ?> . TODOS OS DIREITOS RESERVADOS.
                                     </p>
                                 </div>
                             </div>
@@ -164,10 +164,36 @@
                                 </div>
 
                                 <div class="col-lg-9 d-flex flex-column flex-md-row justify-content-between align-items-center my-4 ml-lg-5">
-                                    <img
-                                    class="img-fluid my-3 my-md-0"
-                                    src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/footer-image.png"
-                                    alt="">
+                                <div class="col-lg-4">
+                            
+                            <div class="row">
+
+                                <div class="col-6">
+                                    <a 
+                                    href="https://www.dominuscomunicacao.com/" 
+                                    target="_blank" 
+                                    rel="noreferrer noopener">
+                                        <img
+                                        class="img-fluid my-3 my-md-0"
+                                        src="https://erwise.com.br/wp-content/uploads/2022/06/dominus.png"
+                                        alt="Dominus">
+                                    </a>
+                                </div>
+
+                                <div class="col-6">
+                                    <a 
+                                    href="https://www.erwise.com.br" 
+                                    target="_blank" 
+                                    rel="noreferrer noopener">
+                                        <img
+                                        class="img-fluid my-3 my-md-0"
+                                        src="https://erwise.com.br/wp-content/uploads/2022/06/erwise.png"
+                                        alt="Erwise">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                                 </div>
                             </div>
                         </div>
