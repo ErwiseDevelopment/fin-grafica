@@ -44,7 +44,7 @@ get_header(); ?>
 <!-- end banner -->
 
 <!-- products -->
-<section>
+<section class="py-5">
 
 	<div class="container">
 
@@ -68,7 +68,7 @@ get_header(); ?>
 							while( $products->have_posts() ) : $products->the_post();
 								$images = get_field( 'imagem_produto', get_the_ID() );
 					?>
-								<div class="col-lg-4 my-3 my-lg-0">
+								<div class="col-lg-4 my-3">
 
 									<div class="card border-0">
 
