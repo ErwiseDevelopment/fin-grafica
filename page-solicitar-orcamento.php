@@ -60,12 +60,7 @@ get_header(); ?>
 							if( isset($_GET['id']))
 								$product_id = $_GET['id'];
 
-							$args = array(
-								'posts_per_page' => 1,
-								'post_type'      => 'produtos'
-							);
-
-							$products = get_posts( $args );
+							$products = get_posts( $product_id );
 
 							foreach( $products as $product ) :
 								echo '<pre>';
