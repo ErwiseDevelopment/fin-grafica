@@ -44,7 +44,7 @@ get_header(); ?>
 <!-- end banner -->
 
 <!-- content -->
-<section>
+<section class="py-5">
 
 	<div class="container">
 				
@@ -54,7 +54,7 @@ get_header(); ?>
 
 				<div class="row">
 
-					<div class="col-6">
+					<div class="col-lg-4">
 
 						<?php
 							if( isset($_GET['id']))
@@ -77,6 +77,10 @@ get_header(); ?>
 										class="img-fluid"
 										src="<?php echo $images[0]['imagens_produto_todos']; ?>"
 										alt="<?php the_title() ?>">
+
+										<h2>
+											<?php the_title() ?>
+										</h2>
 						<?php
 									endif;
 								endwhile;
@@ -84,6 +88,10 @@ get_header(); ?>
 
 							wp_reset_query();
 						?>
+					</div>
+
+					<div class="col-lg-6 mt-4 mt-lg-0">
+						<?php echo do_shortcode( '[contact-form-7 id="647" title="Solicitação"]' ); ?>
 					</div>
 				</div>
 			</div>
