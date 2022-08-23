@@ -78,9 +78,9 @@ get_header(); ?>
 										src="<?php echo $images[0]['imagens_produto_todos']; ?>"
 										alt="<?php the_title() ?>">
 
-										<h3 class="u-title u-font-weight-bold text-uppercase all:u-color-folk-theme mb-0">
-											<span class="u-title--highlight u-font-weight-black"><?php the_title() ?></span>
-										</h3>
+										<h3 class="u-font-weight-bold text-uppercase u-color-folk-theme mb-0">
+											<?php the_title() ?>
+										</h5>
 						<?php
 									endif;
 								endwhile;
