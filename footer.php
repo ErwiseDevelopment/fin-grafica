@@ -318,7 +318,7 @@
                     <div class="row justify-content-center">
 
                         <div class="col-lg-9 d-flex justify-content-center align-items-center my-4">
-                        <div class="col-lg-4">
+                        <div class="col-lg-8">
                             
                             <div class="row">
 
