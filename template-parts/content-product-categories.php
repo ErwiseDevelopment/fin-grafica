@@ -34,9 +34,21 @@
                             </div>
 
                             <!-- loop -->
-                            <?php
+                            <!--
                                 if( have_rows( 'categorias_como_podemos_ajudar' ) ) :
                                     while( have_rows( 'categorias_como_podemos_ajudar' ) ) : the_row();
+                            -->
+
+                            <?php
+                                $product_categories = get_categories(
+                                    array(
+                                        'taxonomy' => 'produto-categoria'
+                                    )
+                                );
+
+                                echo '<prev>';
+                                var_dump($product_categories);
+                                echo '</prev>';
                             ?>
                                         <div class="col-6 my-1">
 
@@ -47,9 +59,9 @@
                                                 // <?php echo get_sub_field( 'categoria' ) ?>
                                             </a>
                                         </div>
-                            <?php   endwhile;
+                            <!--   endwhile;
                                 endif;
-                            ?>
+                            -->
                             <!-- end loop -->
 
                             <!-- <div class="col-6 my-1">
