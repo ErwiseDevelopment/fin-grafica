@@ -60,14 +60,18 @@ get_header(); ?>
 							if( isset($_GET['id']))
 								$product_id = $_GET['id'];
 
-							$products = get_posts( $product_id );
+							$args = array(
+								'posts_per_page' => 1,
+								'post_type'      => 'produtos',
+								'post__in'       => array( $product_id )
+							);
 
-							foreach( $products as $product ) :
-								echo '<pre>';
-								var_dump($product);
-								echo '</pre>';
+							$products = new WP_Query( $args );
+
+							echo '<pre>';
+							var_dump($products);
+							echo '</pre>';
 						?>
-						<?php endforeach; ?>
 					</div>
 				</div>
 			</div>
