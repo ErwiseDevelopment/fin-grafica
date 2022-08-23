@@ -37,11 +37,7 @@
                                         <div class="card border-0">
 
                                             <div class="l-best-sellers__card-img card-img d-flex justify-content-center align-items-center">
-                                                <!-- <img
-                                                class="img-fluid"
-                                                src="http://grafica.test/wp-content/uploads/2022/03/product-1.png"
-                                                alt=""> -->
-
+                                  
                                                 <!-- swiper -->
                                                 <div class="swiper-container js-swiper-product-images">
 
@@ -98,7 +94,7 @@
                                                     <div class="col-lg-8">
                                                         <a 
                                                         class="l-blogs__read-more u-line-height-100 hover:u-opacity-8 d-block u-font-weight-bold text-center text-decoration-none u-color-folk-white u-bg-folk-primary py-3 px-5" 
-                                                        href="<?php echo get_field( 'orcamento_link' ) ?>">
+                                                        href="<?php echo get_home_url( null, 'solicitar-orcamento/?id=' . get_the_ID() )  ?>">
                                                             + Detalhes
                                                         </a>
                                                     </div>
