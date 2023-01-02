@@ -93,7 +93,7 @@
 
                                                     <div class="col-lg-8">
                                                         <a 
-                                                        class="l-blogs__read-more u-line-height-100 hover:u-opacity-8 d-block u-font-weight-bold text-center text-decoration-none u-color-folk-white u-bg-folk-primary py-3 px-5" 
+                                                        class="l-blogs__read-more u-line-height-100 hover:u-opacity-8 d-block u-font-weight-bold text-center text-decoration-none u-color-folk-white u-bg-folk-primary py-3 px-3" 
                                                         href="<?php echo get_home_url( null, 'solicitar-orcamento/?id=' . get_the_ID() )  ?>">
                                                             + Detalhes
                                                         </a>
@@ -109,134 +109,6 @@
                         ?>
                         <!-- end slide -->
 
-                        <!-- <div class="swiper-slide">
-
-                            <div class="card border-0">
-
-                                <div class="l-best-sellers__card-img card-img d-flex justify-content-center align-items-center">
-                                    <img
-                                    class="img-fluid"
-                                    src="http://grafica.test/wp-content/uploads/2022/03/product-1.png"
-                                    alt="">
-                                </div>
-
-                                <div class="card-body pb-0">
-
-                                    <p class="l-best-sellers__card-title u-font-weight-bold u-color-folk-theme">
-                                        Embalagem Batata 
-                                        Frita Individual
-                                    </p>
-
-                                    <p class="l-best-sellers__card-description">
-                                        <strong>Montagem Manual</strong> <br>
-                                        Impressão Off Set Alta Qualidade <br>
-                                        Cores: 4x0 <br>
-                                        Papel Duplex 280g <br>
-                                        Formato: 13x12,5x7,5
-                                    </p>
-                                </div>
-
-                                <div class="card-footer border-0 u-bg-folk-none px-0">
-
-                                    <div class="row">
-
-                                        <div class="col-lg-8">
-                                            <a 
-                                            class="l-blogs__read-more u-line-height-100 hover:u-opacity-8 d-block u-font-weight-bold text-center text-decoration-none u-color-folk-white u-bg-folk-primary py-3 px-5" 
-                                            href="https://portal.erwise.com.br/familias-brasileiras-quais-os-principais-desafios/">
-                                                + Detalhes
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-
-                            <div class="card border-0">
-
-                                <div class="l-best-sellers__card-img card-img d-flex justify-content-center align-items-center">
-                                    <img
-                                    class="img-fluid"
-                                    src="http://grafica.test/wp-content/uploads/2022/03/product-1.png"
-                                    alt="">
-                                </div>
-
-                                <div class="card-body pb-0">
-
-                                    <p class="l-best-sellers__card-title u-font-weight-bold u-color-folk-theme">
-                                        Embalagem Batata 
-                                        Frita Individual
-                                    </p>
-
-                                    <p class="l-best-sellers__card-description">
-                                        <strong>Montagem Manual</strong> <br>
-                                        Impressão Off Set Alta Qualidade <br>
-                                        Cores: 4x0 <br>
-                                        Papel Duplex 280g <br>
-                                        Formato: 13x12,5x7,5
-                                    </p>
-                                </div>
-
-                                <div class="card-footer border-0 u-bg-folk-none px-0">
-
-                                    <div class="row">
-
-                                        <div class="col-lg-8">
-                                            <a 
-                                            class="l-blogs__read-more u-line-height-100 hover:u-opacity-8 d-block u-font-weight-bold text-center text-decoration-none u-color-folk-white u-bg-folk-primary py-3 px-5" 
-                                            href="https://portal.erwise.com.br/familias-brasileiras-quais-os-principais-desafios/">
-                                                + Detalhes
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-
-                            <div class="card border-0">
-
-                                <div class="l-best-sellers__card-img card-img d-flex justify-content-center align-items-center">
-                                    <img
-                                    class="img-fluid"
-                                    src="http://grafica.test/wp-content/uploads/2022/03/product-1.png"
-                                    alt="">
-                                </div>
-
-                                <div class="card-body pb-0">
-
-                                    <p class="l-best-sellers__card-title u-font-weight-bold u-color-folk-theme">
-                                        Embalagem Batata 
-                                        Frita Individual
-                                    </p>
-
-                                    <p class="l-best-sellers__card-description">
-                                        <strong>Montagem Manual</strong> <br>
-                                        Impressão Off Set Alta Qualidade <br>
-                                        Cores: 4x0 <br>
-                                        Papel Duplex 280g <br>
-                                        Formato: 13x12,5x7,5
-                                    </p>
-                                </div>
-
-                                <div class="card-footer border-0 u-bg-folk-none px-0">
-
-                                    <div class="row">
-
-                                        <div class="col-lg-8">
-                                            <a 
-                                            class="l-blogs__read-more u-line-height-100 hover:u-opacity-8 d-block u-font-weight-bold text-center text-decoration-none u-color-folk-white u-bg-folk-primary py-3 px-5" 
-                                            href="https://portal.erwise.com.br/familias-brasileiras-quais-os-principais-desafios/">
-                                                + Detalhes
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
                     </div>
                 </div>
 

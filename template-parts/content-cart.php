@@ -2,7 +2,7 @@
 
     <a
     class="l-cart__link d-flex flex-column p-3"
-    href="#">
+    href="https://api.whatsapp.com/message/RICKS46WDLHMG1?autoload=1&app_absent=0">
         <img
         class="img-fluid px-4"
         src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/image-cart.png"

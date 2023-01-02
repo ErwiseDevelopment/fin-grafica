@@ -26,34 +26,6 @@
                             endif;
                         ?>
                         <!-- end slide -->
-
-                        <!-- <div class="swiper-slide">
-                            <img
-                            class="img-fluid w-100 h-100"
-                            src="http://grafica.test/wp-content/uploads/2022/03/show-product-image-1.png"
-                            alt="">
-                        </div>
-
-                        <div class="swiper-slide">
-                            <img
-                            class="img-fluid w-100 h-100"
-                            src="http://grafica.test/wp-content/uploads/2022/03/show-product-image-1.png"
-                            alt="">
-                        </div>
-
-                        <div class="swiper-slide">
-                            <img
-                            class="img-fluid w-100 h-100"
-                            src="http://grafica.test/wp-content/uploads/2022/03/show-product-image-1.png"
-                            alt="">
-                        </div>
-
-                        <div class="swiper-slide">
-                            <img
-                            class="img-fluid w-100 h-100"
-                            src="http://grafica.test/wp-content/uploads/2022/03/show-product-image-1.png"
-                            alt="">
-                        </div> -->
                     </div>
                 </div>
 
