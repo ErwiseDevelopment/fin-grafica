@@ -41,7 +41,12 @@ const swiperProducts = new Swiper( '.js-swiper-best-sellers', {
 //product images
 const swiperProductImages = new Swiper( '.js-swiper-product-images', {    
     slidePerView: 1,
-    loop: true
+    loop: true,
+
+    navigation: {
+        prevEl: '.js-swiper-button-prev-product-images',
+        nextEl: '.js-swiper-button-next-product-images',
+    }
 })
 
 //show products
