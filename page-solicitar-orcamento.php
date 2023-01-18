@@ -129,7 +129,7 @@ get_header(); ?>
 							</div>
 							<script>
 									$("#material").on("change", function(){
-									var motorista = $(this).val();
+									var material = $(this).val();
 									$.post("solicitar-orcamento.php", {material: material}, function( data ) {
 										$("#material").val(data);
 									});
