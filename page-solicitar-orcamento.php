@@ -68,7 +68,7 @@ get_header(); ?>
 										$materiais = $_GET['material'];
 
 										$args = array(
-											'posts_per_page' => 1,
+											'posts_per_page' => -1,
 											'post_type'      => 'produtos',
 											//'post__in'       => array($product_id),
 											'tax_query'      => array(
