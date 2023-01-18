@@ -62,7 +62,7 @@ get_header(); ?>
 									<div class="swiper-container js-swiper-product-images">
 
 										<?php
-										if (isset($_GET['id']))
+										if (isset($_GET['material']))
 											$product_id = $_GET['id'];
 
 										$materiais = $_GET['material'];
