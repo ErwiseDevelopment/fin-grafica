@@ -118,7 +118,7 @@ get_header(); ?>
 									<!-- end swiper -->
 
 									<h3 class="u-font-weight-bold text-uppercase text-center u-color-folk-theme mb-0 js-title">
-										<?php echo $product_title; ?>
+										<?php var_dump($materiais); ?>
 									</h3>
 								</div>
 
