@@ -75,7 +75,7 @@ get_header(); ?>
 												array(
 													'taxonomy' => 'produto-categoria',
 													'field'    => 'slug',
-													'terms'    => array($materiais)
+													'terms'    => array($materiais),
 												)
 											)
 										);
@@ -118,7 +118,8 @@ get_header(); ?>
 									<!-- end swiper -->
 
 									<h3 class="u-font-weight-bold text-uppercase text-center u-color-folk-theme mb-0 js-title">
-										<?php var_dump($materiais); ?>
+										<?php var_dump($materiais); ?> </br>
+										<?php var_dump($args)?>
 									</h3>
 								</div>
 
