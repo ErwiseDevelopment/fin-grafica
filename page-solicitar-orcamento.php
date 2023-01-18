@@ -65,7 +65,7 @@ get_header(); ?>
 										if (isset($_GET['material']))
 											$product_id = $_GET['id'];
 
-										$materiais = $_GET['material'];
+										$materiais = $_POST['material'];
 
 										$args = array(
 											'posts_per_page' => -1,
@@ -127,6 +127,14 @@ get_header(); ?>
 									<?php echo do_shortcode('[contact-form-7 id="647" title="Solicitação"]'); ?>
 								</div>
 							</div>
+							<script>
+									$("#material").on("change", function(){
+									var motorista = $(this).val();
+									$.post("solicitar-orcamento.php", {material: material}, function( data ) {
+										$("#material").val(data);
+									});
+								});
+								</script>
 						</div>
 					</div>
 				</div>
