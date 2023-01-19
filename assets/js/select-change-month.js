@@ -5,7 +5,7 @@
         
         });
 
-        $( '#mes' ).change(function() {
+        $( '#material' ).change(function() {
             $( '#formulario' ).submit();
         });
     })
