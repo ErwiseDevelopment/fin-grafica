@@ -126,6 +126,9 @@ get_header(); ?>
 								<div class="col-lg-8 mt-4 mt-lg-0 px-4">
 								<form method="GET" action="<?php echo get_home_url( null, 'solicitar-orcamento' ) ?>" id="formulario">
 									<?php echo do_shortcode('[contact-form-7 id="647" title="Solicitação"]'); ?>
+									
+                                    <option value="<?php echo $materiais; ?>" <?php echo 'selected'; ?>></option>
+                              
 								</form>
 								</div>
 							</div>
