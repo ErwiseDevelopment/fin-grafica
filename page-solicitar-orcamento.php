@@ -127,7 +127,7 @@ get_header(); ?>
 								<form method="GET" action="<?php echo get_home_url( null, 'solicitar-orcamento' ) ?>" id="formulario">
 									<?php echo do_shortcode('[contact-form-7 id="647" title="Solicitação"]'); ?>
 									 <?php foreach ($args as $mes => $meses): ?>
-                                    <option value="<?php echo $materiais; ?>" <?php if ( $mes == $args ) { echo 'selected'; } ?>></option>
+                                    <option value="<?php echo $materiais; ?>" <?php if ( $mes == $materiais ) { echo 'selected'; } ?>></option>
                                 <?php endforeach; ?>
 								</form>
 								</div>
