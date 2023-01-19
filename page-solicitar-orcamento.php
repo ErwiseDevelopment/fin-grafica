@@ -126,7 +126,7 @@ get_header(); ?>
 								<div class="col-lg-8 mt-4 mt-lg-0 px-4">
 								<form method="GET" action="<?php echo get_home_url( null, 'solicitar-orcamento' ) ?>" id="formulario">
 									<?php echo do_shortcode('[contact-form-7 id="647" title="Solicitação"]'); ?>
-									                                <?php foreach ($args as $mes => $meses): ?>
+									 <?php foreach ($args as $mes => $meses): ?>
                                     <option value="<?php echo $materiais; ?>" <?php if ( $mes == $args ) { echo 'selected'; } ?>></option>
                                 <?php endforeach; ?>
 								</form>
@@ -155,6 +155,15 @@ get_header(); ?>
 						getLink.value = showLink.dataset.value
 					}
 				}, 1000)
+
+				(function($) {
+    $(document).ready(function() {
+
+        $( '#material' ).change(function() {
+            $( '#formulario' ).submit();
+        });
+    })
+})(jQuery)
 			</script>
 
 		<?php endwhile; ?>
