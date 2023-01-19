@@ -65,7 +65,7 @@ get_header(); ?>
 										if (isset($_GET['material']))
 											$product_id = $_GET['id'];
 
-										$materiais = $_POST['material'];
+										$materiais = $_GET['material'];
 
 										$args = array(
 											'posts_per_page' => -1,
