@@ -24,8 +24,13 @@
                             $args = array(
                                 'posts_per_page' => -1,
                                 'post_type'      => 'produtos',
-                                'order'          => 'DESC'
-                            );
+                                'order'          => 'DESC',
+                                'tax_query'      => array(
+                                    array(
+                                        'taxonomy' => 'produto-categoria',
+                                        'field'    => 'slug',
+                                )
+                            ));
 
                             $products = new WP_Query( $args );
 
@@ -100,7 +105,7 @@
                                                             ?>
                                                         <a 
                                                         class="l-blogs__read-more u-line-height-100 hover:u-opacity-8 d-block u-font-weight-bold text-center text-decoration-none u-color-folk-white u-bg-folk-primary py-3 px-3" 
-                                                        href="<?php echo get_home_url( null, 'solicitar-orcamento/?id=' . get_the_ID()  . '&meta=' .  $categoria->slug[0] )  ?>">
+                                                        href="<?php echo get_home_url( null, 'solicitar-orcamento/?id=' . get_the_ID()  . '&meta=' .  $products->slug )  ?>">
                                                             + Detalhes
                                                         </a>
                                                         <?php } ?>
