@@ -62,20 +62,20 @@ get_header(); ?>
 									<div class="swiper-container js-swiper-product-images">
 
 										<?php
-										  if ( isset ( $_GET['material'] ) && !empty ( $_GET['material'] ) ) {
-											$materiais= $_GET['material'];
-										}
+										if (isset($_GET['id']))
+											$product_id = $_GET['id'];
 
+										$materiais = $_POST['materiais'];
 
 										$args = array(
-											'posts_per_page' => -1,
+											'posts_per_page' => 1,
 											'post_type'      => 'produtos',
 											//'post__in'       => array($product_id),
 											'tax_query'      => array(
 												array(
 													'taxonomy' => 'produto-categoria',
 													'field'    => 'slug',
-													'terms'    => array($materiais),
+													'terms'    => array($materiais)
 												)
 											)
 										);
@@ -118,27 +118,19 @@ get_header(); ?>
 									<!-- end swiper -->
 
 									<h3 class="u-font-weight-bold text-uppercase text-center u-color-folk-theme mb-0 js-title">
-										<?php var_dump($materiais); ?> </br>
-										<?php var_dump($args)?>
+										<?php echo $product_title; ?>
 									</h3>
 								</div>
 
 								<div class="col-lg-8 mt-4 mt-lg-0 px-4">
-								<form method="GET" action="<?php echo get_home_url( null, 'solicitar-orcamento' ) ?>" id="formulario">
-									<!-- <php echo do_shortcode('[contact-form-7 id="647" title="Solicitação"]'); ?> -->
-										<select id="material" name="material"> 
-										<option value="">Selecione</option>
-										<option value= "embalagem"  <?php if (  'embalagem' == $materiais){echo 'selected';} ?>>Embalagem</option>
-										</select>
-								</form>
+									<?php echo do_shortcode('[contact-form-7 id="647" title="Solicitação"]'); ?>
 								</div>
 							</div>
-
 						</div>
 					</div>
 				</div>
 			</section>
-			<!-- end content -->
+			<!-- end content -->]
 
 			<script>
 				setTimeout(function() {
@@ -156,15 +148,6 @@ get_header(); ?>
 						getLink.value = showLink.dataset.value
 					}
 				}, 1000)
-
-				(function($) {
-    $(document).ready(function() {
-
-        $( '#material' ).change(function() {
-            $( '#formulario' ).submit();
-        });
-    })
-})(jQuery)
 			</script>
 
 		<?php endwhile; ?>
