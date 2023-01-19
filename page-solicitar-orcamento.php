@@ -126,7 +126,7 @@ get_header(); ?>
 								<div class="col-lg-8 mt-4 mt-lg-0 px-4">
 								<form method="GET" action="<?php echo get_home_url( null, 'solicitar-orcamento' ) ?>" id="formulario">
 									<?php echo do_shortcode('[contact-form-7 id="647" title="Solicitação"]'); ?>
-									<?php if ($materiais == 'embalagem') {echo 'selected';} ?>
+									<option value= "embalagem" > <?php if ($materiais == 'embalagem') {echo 'selected';} ?></option>
 								</form>
 								</div>
 							</div>
@@ -135,7 +135,7 @@ get_header(); ?>
 					</div>
 				</div>
 			</section>
-			<!-- end content -->]
+			<!-- end content -->
 
 			<script>
 				setTimeout(function() {
