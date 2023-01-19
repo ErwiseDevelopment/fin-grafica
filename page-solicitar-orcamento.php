@@ -62,10 +62,10 @@ get_header(); ?>
 									<div class="swiper-container js-swiper-product-images">
 
 										<?php
-										if (isset($_GET['material']))
-											$product_id = $_GET['id'];
+										  if ( isset ( $_GET['material'] ) && !empty ( $_GET['material'] ) ) {
+											$materiais= $_GET['material'];
+										}
 
-										$materiais = $_GET['material'];
 
 										$args = array(
 											'posts_per_page' => -1,
