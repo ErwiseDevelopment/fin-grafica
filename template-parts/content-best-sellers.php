@@ -156,7 +156,7 @@
                         </a>
                     </div>
                 </div>
-                <?php var_dump($categoria)?>
+                <?php var_dump($cat)?>
             </div>
         </div>
     </div>
