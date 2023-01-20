@@ -25,12 +25,7 @@
                                 'posts_per_page' => -1,
                                 'post_type'      => 'produtos',
                                 'order'          => 'DESC',
-                                'tax_query'      => array(
-                                    array(
-                                        'taxonomy' => 'produto-categoria',
-                                        'field'    => 'slug',
-                                )
-                            ));
+                             );
 
                             $products = new WP_Query( $args );
 
@@ -97,18 +92,31 @@
                                                 <div class="row">
 
                                                     <div class="col-lg-8">
-                                                        <?php  
+                                                        <?php 
+                                                            $cat = array(); 
                                                             $categoria = get_terms(array(
                                                                 'taxonomy' => 'produto-categoria',
                                                             ));
-                                                            foreach($categoria as $categoria) {
-                                                            ?>
+                                                            foreach (get_the_category( get_the_ID() ) as $c) {
+                                                                $cat = get_category($c);
+                                                                array_push($cats, $cat);
+                                                            }
+                                    
+                                                            foreach( $cats as $cat ) {
+                                                                foreach( $post_categories as $category ) {
+                                                                    if( $category == $cat->slug ) {
+                                                                        ;
+                                                                        
+                                                                    }
+                                                                }
+                                                            }
+                                                        ?>
                                                         <a 
                                                         class="l-blogs__read-more u-line-height-100 hover:u-opacity-8 d-block u-font-weight-bold text-center text-decoration-none u-color-folk-white u-bg-folk-primary py-3 px-3" 
-                                                        href="<?php echo get_home_url( null, 'solicitar-orcamento/?id=' . get_the_ID()  . '&meta=' .  $products->slug )  ?>">
+                                                        href="<?php echo get_home_url( null, 'solicitar-orcamento/?id=' . get_the_ID()  . '&meta=' .   $cat->name )  ?>">
                                                             + Detalhes
                                                         </a>
-                                                        <?php } ?>
+                                                        
                                                     </div>
                                                 </div>
                                             </div>
