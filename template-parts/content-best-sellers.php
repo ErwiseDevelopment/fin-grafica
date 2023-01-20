@@ -100,16 +100,16 @@
                                                                 array_push($cats, $cat);
                                                             }
                                                             foreach( $cats as $cat ) {
-                                                                
-                                                            
+                                                              $categoria = $cat->slug;
+                                                            } 
                                                             
                                                         ?>
                                                         <a 
                                                         class="l-blogs__read-more u-line-height-100 hover:u-opacity-8 d-block u-font-weight-bold text-center text-decoration-none u-color-folk-white u-bg-folk-primary py-3 px-3" 
-                                                        href="<?php echo get_home_url( null, 'solicitar-orcamento/?id=' . get_the_ID()  . '&meta=' .   $cat->slug  )  ?>">
+                                                        href="<?php echo get_home_url( null, 'solicitar-orcamento/?id=' . get_the_ID()  . '&meta=' .  $categoria   )  ?>">
                                                             + Detalhes
                                                         </a>
-                                                        <?php } ?>
+                                                        <?php ?> 
                                                     </div>
                                                 </div>
                                             </div>
