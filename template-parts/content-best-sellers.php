@@ -74,14 +74,6 @@
                                                     <?php the_title() ?>
                                                 </p>
 
-                                                <!-- <p class="l-best-sellers__card-description">
-                                                    <strong>Montagem Manual</strong> <br>
-                                                    Impressão Off Set Alta Qualidade <br>
-                                                    Cores: 4x0 <br>
-                                                    Papel Duplex 280g <br>
-                                                    Formato: 13x12,5x7,5
-                                                </p> -->
-
                                                 <span class="l-best-sellers__card-description d-block">
                                                     <?php echo get_field( 'descricao_produto' ) ?>
                                                 </span>
@@ -93,23 +85,18 @@
 
                                                     <div class="col-lg-8">
                                                         <?php 
-                                                            $cats = array(); 
-                                                          
-                                                            foreach (get_the_category( get_the_ID() ) as $c) {
-                                                                $cat = get_category($c);
-                                                                array_push($cats, $cat);
-                                                            }
-                                                            foreach( $cats as $cat ) {
-                                                              $categoria = $cat->slug;
-                                                            } 
-                                                            
+                                                            $cat = array(); 
+                                                            $categoria = get_terms(array(
+                                                                'taxonomy' => 'produto-categoria',
+                                                            ));
+                                                           
                                                         ?>
                                                         <a 
                                                         class="l-blogs__read-more u-line-height-100 hover:u-opacity-8 d-block u-font-weight-bold text-center text-decoration-none u-color-folk-white u-bg-folk-primary py-3 px-3" 
-                                                        href="<?php echo get_home_url( null, 'solicitar-orcamento/?id=' . get_the_ID()  . '&meta=' .  $categoria   )  ?>">
+                                                        href="<?php echo get_home_url( null, 'solicitar-orcamento/?id=' . get_the_ID()  . '&meta=' .  $categoria  )  ?>">
                                                             + Detalhes
                                                         </a>
-                                                        <?php ?> 
+                                                        
                                                     </div>
                                                 </div>
                                             </div>
@@ -156,7 +143,6 @@
                         </a>
                     </div>
                 </div>
-                <?php var_dump($cat)?>
             </div>
         </div>
     </div>
