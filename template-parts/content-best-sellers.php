@@ -87,8 +87,9 @@
                                                         <?php 
                                                             $cat = array(); 
                                                             $categoria = get_the_terms(get_the_ID(), 'produto-categoria',
-                                                            );
-                                                           
+                                                            
+                                                        );
+                                                           var_dump($categoria)
                                                         ?>
                                                         <a 
                                                         class="l-blogs__read-more u-line-height-100 hover:u-opacity-8 d-block u-font-weight-bold text-center text-decoration-none u-color-folk-white u-bg-folk-primary py-3 px-3" 
