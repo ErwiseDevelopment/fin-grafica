@@ -156,6 +156,7 @@
                         </a>
                     </div>
                 </div>
+                <?php var_dump($categoria)?>
             </div>
         </div>
     </div>
