@@ -93,15 +93,15 @@
 
                                                     <div class="col-lg-8">
                                                         <?php 
-                                                            $cat = array(); 
-                                                            $categoria = get_terms(array(
-                                                                'taxonomy' => 'produto-categoria',
-                                                            ));
+                                                            $cats = array(); 
+                                                          
                                                             foreach (get_the_category( get_the_ID() ) as $c) {
                                                                 $cat = get_category($c);
                                                                 array_push($cats, $cat);
                                                             }
-                                    
+                                                            foreach( $cats as $cat ) {
+                                                                
+                                                            
                                                             
                                                         ?>
                                                         <a 
@@ -109,7 +109,7 @@
                                                         href="<?php echo get_home_url( null, 'solicitar-orcamento/?id=' . get_the_ID()  . '&meta=' .   $cat->slug  )  ?>">
                                                             + Detalhes
                                                         </a>
-                                                        
+                                                        <?php } ?>
                                                     </div>
                                                 </div>
                                             </div>
