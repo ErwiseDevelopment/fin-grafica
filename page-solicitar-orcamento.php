@@ -141,6 +141,18 @@ get_header(); ?>
 			getLink.value = showLink.dataset.value
 		}
 	}, 1000)
+
+	let url_string = window.location.href;
+	let url = new URL(url_string);
+	let data = url.searchParams.get("meta");
+
+	let selectMaterial = document.querySelector( 'select[name=material]' ).getElementsByTagName( 'option' )
+	
+	for(let select of selectMaterial) {
+		if(select.innerText == data) {
+			document.querySelector( 'select[name=material]' ).value = select.innerText
+		}
+	}
 </script>
 
 <?php endwhile; ?>
