@@ -1,5 +1,5 @@
-let data = new Date()
-let monthCurrent = String(data.getMonth() + 1).padStart(2, '0')
+let dataCurrent = new Date()
+let monthCurrent = String(dataCurrent.getMonth() + 1).padStart(2, '0')
 monthCurrent = parseInt(monthCurrent)
 monthCurrent--
 

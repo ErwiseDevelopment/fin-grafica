@@ -106,13 +106,27 @@ get_header(); ?>
 							?>
 						</div>
 
-						<div class="swiper-button-prev swiper-button-prev-partners d-none d-lg-flex after::u-color-folk-white u-bg-folk-theme js-swiper-button-prev-product-images"></div>
-						<div class="swiper-button-next swiper-button-next-partners d-none d-lg-flex after::u-color-folk-white u-bg-folk-theme js-swiper-button-next-product-images"></div>
-						<!-- end swiper -->
 
-						<h3 class="u-font-weight-bold text-uppercase text-center u-color-folk-theme mb-0 js-title">
-							<?php echo $product_title; ?>
-						</h3>
+						<div class="row">
+
+							<div class="col-1">
+								<div 
+								class="swiper-button-prev swiper-button-prev-partners d-none d-lg-flex after::u-color-folk-white u-bg-folk-theme js-swiper-button-prev-product-images"
+								style="left:1rem!important"></div>
+							</div>
+
+							<div class="col-10">
+								<h4 class="u-font-weight-bold text-uppercase text-center u-color-folk-theme mb-0 js-title">
+									<?php echo $product_title; ?>
+								</h4>
+							</div>
+							<div class="col-1">
+								<div 
+								class="swiper-button-next swiper-button-next-partners d-none d-lg-flex after::u-color-folk-white u-bg-folk-theme js-swiper-button-next-product-images"
+								style="right:1rem!important"></div>
+							</div>
+						</div>
+						<!-- end swiper -->
 					</div>
 
 					<div class="col-lg-8 mt-4 mt-lg-0 px-lg-5">
