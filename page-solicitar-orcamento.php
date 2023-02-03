@@ -47,7 +47,19 @@ get_header(); ?>
 <section class="py-5">
 
 	<div class="container">
-				
+		<div class="col-12">
+
+				<div class="row justify-content-center">
+
+					<div class="col-lg-3 my-3">
+						<a 
+						class="l-blogs__read-more u-line-height-100 hover:u-opacity-8 d-block u-font-weight-bold text-center text-decoration-none u-color-folk-white u-bgi-folk-orange py-3 px-8" 
+						href="<?php echo get_home_url(null, 'categoria-produto/')?>">
+							Todos os produtos
+						</a>
+					</div>
+				</div>
+		</div>
 		<div class="row">
 
 			<div class="col-12">
@@ -77,19 +89,7 @@ get_header(); ?>
 										// if( $images ) :
 										// echo "<span class='js-show-product-link' data-value='" . get_the_permalink() . "'></span>";
 							?>
-							            <div class="col-12">
-
-											<div class="row justify-content-center">
-
-												<div class="col-lg-3 my-3">
-													<a 
-													class="l-blogs__read-more u-line-height-100 hover:u-opacity-8 d-block u-font-weight-bold text-center text-decoration-none u-color-folk-white u-bgi-folk-orange py-3 px-8" 
-													href="<?php echo get_home_url(null, 'categoria-produto/')?>">
-														Todos os produtos
-													</a>
-												</div>
-											</div>
-										</div>
+							            
 										<div 
 										class="swiper-wrapper js-show-product-link"
 										data-value="<?php the_permalink(); ?>">
