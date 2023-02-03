@@ -10,11 +10,6 @@
 
                     <div class="col-lg-6 pr-lg-0">
 
-                        <!-- <img
-                        class="img-fluid w-100 h-100"
-                        src="http://grafica.test/wp-content/uploads/2022/03/product-categories-image.png"
-                        alt=""> -->
-
                         <img
                         class="img-fluid w-100 h-100"
                         src="<?php echo get_field( 'imagem_como_podemos_ajudar' ) ?>"
@@ -32,12 +27,6 @@
                                     <span class="u-title--highlight u-font-weight-black">ajudar?</span>
                                 </h3>
                             </div>
-
-                            <!-- loop -->
-                            <!--
-                                if( have_rows( 'categorias_como_podemos_ajudar' ) ) :
-                                    while( have_rows( 'categorias_como_podemos_ajudar' ) ) : the_row();
-                            -->
 
                             <?php
                                 $product_categories = get_categories(
@@ -58,119 +47,7 @@
                                         </a>
                                     </div>
                             <?php endforeach; ?>
-                            <!--   endwhile;
-                                endif;
-                            -->
-                            <!-- end loop -->
-
-                            <!-- <div class="col-6 my-1">
-
-                                <a 
-                                class="l-product-categories__item d-block u-font-weight-semibold text-center text-decoration-none u-color-folk-white py-2"
-                                href="#">
-                                    // Folhetos
-                                </a>
-                            </div>
-
-                            <div class="col-6 my-1">
-
-                                <a 
-                                class="l-product-categories__item d-block u-font-weight-semibold text-center text-decoration-none u-color-folk-white py-2"
-                                href="#">
-                                    // Folhetos
-                                </a>
-                            </div>
-
-                            <div class="col-6 my-1">
-
-                                <a 
-                                class="l-product-categories__item d-block u-font-weight-semibold text-center text-decoration-none u-color-folk-white py-2"
-                                href="#">
-                                    // Folhetos
-                                </a>
-                            </div>
-
-                            <div class="col-6 my-1">
-
-                                <a 
-                                class="l-product-categories__item d-block u-font-weight-semibold text-center text-decoration-none u-color-folk-white py-2"
-                                href="#">
-                                    // Folhetos
-                                </a>
-                            </div>
-
-                            <div class="col-6 my-1">
-
-                                <a 
-                                class="l-product-categories__item d-block u-font-weight-semibold text-center text-decoration-none u-color-folk-white py-2"
-                                href="#">
-                                    // Folhetos
-                                </a>
-                            </div>
-
-                            <div class="col-6 my-1">
-
-                                <a 
-                                class="l-product-categories__item d-block u-font-weight-semibold text-center text-decoration-none u-color-folk-white py-2"
-                                href="#">
-                                    // Folhetos
-                                </a>
-                            </div>
-
-                            <div class="col-6 my-1">
-
-                                <a 
-                                class="l-product-categories__item d-block u-font-weight-semibold text-center text-decoration-none u-color-folk-white py-2"
-                                href="#">
-                                    // Folhetos
-                                </a>
-                            </div>
-
-                            <div class="col-6 my-1">
-
-                                <a 
-                                class="l-product-categories__item d-block u-font-weight-semibold text-center text-decoration-none u-color-folk-white py-2"
-                                href="#">
-                                    // Folhetos
-                                </a>
-                            </div>
-
-                            <div class="col-6 my-1">
-
-                                <a 
-                                class="l-product-categories__item d-block u-font-weight-semibold text-center text-decoration-none u-color-folk-white py-2"
-                                href="#">
-                                    // Folhetos
-                                </a>
-                            </div>
-
-                            <div class="col-6 my-1">
-
-                                <a 
-                                class="l-product-categories__item d-block u-font-weight-semibold text-center text-decoration-none u-color-folk-white py-2"
-                                href="#">
-                                    // Folhetos
-                                </a>
-                            </div>
-
-                            <div class="col-6 my-1">
-
-                                <a 
-                                class="l-product-categories__item d-block u-font-weight-semibold text-center text-decoration-none u-color-folk-white py-2"
-                                href="#">
-                                    // Folhetos
-                                </a>
-                            </div>
-
-                            <div class="col-6 my-1">
-
-                                <a 
-                                class="l-product-categories__item d-block u-font-weight-semibold text-center text-decoration-none u-color-folk-white py-2"
-                                href="#">
-                                    // Folhetos
-                                </a>
-                            </div> -->
-                        </div>
+                           </div>
                     </div>
                 </div>
             </div>

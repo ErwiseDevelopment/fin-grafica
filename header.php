@@ -144,7 +144,7 @@
 
             <div class="row">
                 
-                <div class="col-9 d-none d-lg-block">
+                <div class="col-12 d-none d-lg-block">
 
                     <div class="row justify-content-center">
 
