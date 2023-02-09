@@ -162,11 +162,11 @@ get_header(); ?>
 								style="right:1rem!important"></div>
 							</div>
 						</div>
-						<!-- end swiper -->
+						<!-- end swiper [contact-form-7 id="688" title="Solicitacao orcamento"]-->
 					</div>
 
 					<div class="col-lg-8 mt-4 mt-lg-0 px-lg-5">
-						<?php echo do_shortcode( '[contact-form-7 id="688" title="Solicitacao orcamento"]' ); ?>
+						<?php echo do_shortcode( '[contact-form-7 id="647" title="Solicitação"]' ); ?>
 					</div>
 				</div>
 			</div>
