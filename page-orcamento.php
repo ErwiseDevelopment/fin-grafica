@@ -203,10 +203,17 @@ get_header(); ?>
 			document.querySelector( 'select[name=material]' ).value = select.innerText
 		}
 	}
-	document.getElementById("productSelect").onchange = function() {
-  var productId = this.value;
-  window.location.href = "http://yourwebsite.com/products/" + productId;
-};
+	select.addEventListener("change", event => {
+  const productId = event.target.value;
+  const product = productList[productId];
+
+  // Update the URL with the product ID
+  window.history.pushState({}, "", `?product=${productId}`);
+
+  // Update the content of the page with the selected product
+  document.getElementById("product").textContent = product.name;
+  document.getElementById("product-description").textContent = product.description;
+});
 </script>
 
 <?php endwhile; ?>
