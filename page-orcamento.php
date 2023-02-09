@@ -58,6 +58,28 @@ get_header(); ?>
 							Fazer outro orçamento
 						</a>
 					</div>
+
+					<div class="col-lg-3 my-3">
+						<label for="product-select">Selecione o produto:</label>
+						<select id="product-select" name="product">
+							<?php
+							// Obtenha todos os produtos disponíveis
+							$args = array(
+								'post_type' => 'produtos',
+								'posts_per_page' => -1
+							);
+							$products = new WP_Query( $args );
+							if( $products->have_posts() ) :
+								while( $products->have_posts() ) : $products->the_post();
+							?>
+							<option value="<?php the_ID(); ?>"><?php the_title(); ?></option>
+							<?php
+								endwhile;
+								wp_reset_postdata();
+							endif;
+							?>
+						</select>
+						</div>
 				</div>
 		</div>
 		<div class="container">
@@ -181,6 +203,10 @@ get_header(); ?>
 			document.querySelector( 'select[name=material]' ).value = select.innerText
 		}
 	}
+	document.getElementById("productSelect").onchange = function() {
+  var productId = this.value;
+  window.location.href = "http://yourwebsite.com/products/" + productId;
+};
 </script>
 
 <?php endwhile; ?>
