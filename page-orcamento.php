@@ -203,17 +203,21 @@ get_header(); ?>
 			document.querySelector( 'select[name=material]' ).value = select.innerText
 		}
 	}
-	select.addEventListener("change", event => {
-  const productId = event.target.value;
-  const product = productList[productId];
+	
+jQuery(document).ready(function($) {
+  $('#product-select').change(function() {
+    var productId = $(this).val();
+    var material = $('#material-select').val();
+    window.location.href = '<?php echo get_home_url(null, 'orcamento/')?>?id=' + productId + '&material=' + material;
+  });
 
-  // Update the URL with the product ID
-  window.history.pushState({}, "", `?product=${productId}`);
-
-  // Update the content of the page with the selected product
-  document.getElementById("product").textContent = product.name;
-  document.getElementById("product-description").textContent = product.description;
+  $('#material-select').change(function() {
+    var material = $(this).val();
+    var productId = $('#product-select').val();
+    window.location.href = '<?php echo get_home_url(null, 'orcamento/')?>?id=' + productId + '&material=' + material;
+  });
 });
+
 </script>
 
 <?php endwhile; ?>
