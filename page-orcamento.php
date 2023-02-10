@@ -212,7 +212,7 @@ get_header(); ?>
 jQuery(document).ready(function($) {
   $('#product-select').change(function() {
     var productId = $(this).val();
-    var material = $('#material-produto').val();
+    var material = <?php $categoria ?>;//$(this).val();
     window.location.href = '<?php echo get_home_url(null, 'orcamento/')?>?id=' + productId + '&material=' + material;
   });
 
