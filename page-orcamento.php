@@ -59,10 +59,10 @@ get_header(); ?>
 						</a>
 					</div>
 					<?php 
-                    
+                    $categoria = get_the_terms(get_the_ID(), 'produto-categoria');
                     ?>
 					<div class="col-lg-3 my-3">
-					<select class="hidden" id="material-produto" <?php $categoria = get_the_terms(get_the_ID(), 'produto-categoria');?>> </select>
+					<select class="hidden" id="material-produto" <?php $categoria[0]->name ?>> </select>
 
 						<label for="product-select">Selecione o produto:</label>
 						<select id="product-select" name="product">
