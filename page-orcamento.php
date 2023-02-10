@@ -69,7 +69,7 @@ get_header(); ?>
 							$args = array(
 								'post_type' => 'produtos',
 								'posts_per_page' => -1,
-								'order' => 'ASC',
+								'order' => 'DSC',
 							);
 							$products = new WP_Query( $args );
 							if( $products->have_posts() ) :
@@ -213,13 +213,13 @@ jQuery(document).ready(function($) {
   $('#product-select').change(function() {
     var productId = $(this).val();
     var material = $('#material-select').val();
-    window.location.href = '<?php echo get_home_url(null, 'orcamento/')?>?id=' + productId + '&material=' + <?php get_the_terms(get_the_ID(), 'produto-categoria'); ?>;
+    window.location.href = '<?php echo get_home_url(null, 'orcamento/')?>?id=' + productId + '&material=' + material;
   });
 
   $('#material-select').change(function() {
     var material = $(this).val();
     var productId = $('#product-select').val();
-    window.location.href = '<?php echo get_home_url(null, 'orcamento/')?>?id=' + productId + '&material=' + <?php get_the_terms(get_the_ID(), 'produto-categoria'); ?>;
+    window.location.href = '<?php echo get_home_url(null, 'orcamento/')?>?id=' + productId + '&material=' + material;
   });
 });
 
