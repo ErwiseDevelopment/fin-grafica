@@ -212,12 +212,12 @@ get_header(); ?>
 jQuery(document).ready(function($) {
   $('#product-select').change(function() {
     var productId = $(this).val();
-    var material = $('#material').val();
+    var material = $('#material-produto').val();
     window.location.href = '<?php echo get_home_url(null, 'orcamento/')?>?id=' + productId + '&material=' + material;
   });
 
-  $('#material').change(function() {
-    var material = $(this).val();
+  $('#material-produto').change(function() {
+    var material = <?php $categoria ?>;//$(this).val();
     var productId = $('#product-select').val();
     window.location.href = '<?php echo get_home_url(null, 'orcamento/')?>?id=' + productId + '&material=' + material;
   });
