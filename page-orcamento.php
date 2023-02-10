@@ -67,7 +67,7 @@ get_header(); ?>
 								'post_type' => 'produtos',
 								'posts_per_page' => -1,
 								'orderby' => 'title',
-								'order' => 'DSC',
+								'order' => 'ASC',
 							);
 							$products = new WP_Query( $args );
 							if( $products->have_posts() ) :
