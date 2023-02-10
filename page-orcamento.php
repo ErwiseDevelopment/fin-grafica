@@ -209,7 +209,7 @@ jQuery(document).ready(function($) {
   $('#product-select').change(function() {
     var productId = $(this).val();
     var material = $('#material-produto').val();
-    window.location.href = '<?php echo get_home_url(null, 'orcamento/')?>?id=' + productId + '&material=' + <?php echo $categoria[0]->name; ?>;
+    window.location.href = '<?php echo get_home_url(null, 'orcamento/')?>?id=' + productId + '&material='  <?php echo $categoria[0]->name ?>;
   });
 
   $('#material-produto').change(function() {
