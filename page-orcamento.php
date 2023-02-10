@@ -62,6 +62,8 @@ get_header(); ?>
                     
                     ?>
 					<div class="col-lg-3 my-3">
+					<select class="hidden" id="material-produto" <?php $categoria = get_the_terms(get_the_ID(), 'produto-categoria');?>> </select>
+
 						<label for="product-select">Selecione o produto:</label>
 						<select id="product-select" name="product">
 							<?php
@@ -74,7 +76,7 @@ get_header(); ?>
 							$products = new WP_Query( $args );
 							if( $products->have_posts() ) :
 								while( $products->have_posts() ) : $products->the_post();
-								$categoria = get_the_terms(get_the_ID(), 'produto-categoria');
+								
 							?>
 							<option value="<?php the_ID(); ?>"><?php the_title(); ?></option>
 							
@@ -212,12 +214,12 @@ get_header(); ?>
 jQuery(document).ready(function($) {
   $('#product-select').change(function() {
     var productId = $(this).val();
-    var material = <?php $categoria ?>;//$(this).val();
+    var material = $('#material-produto').val();
     window.location.href = '<?php echo get_home_url(null, 'orcamento/')?>?id=' + productId + '&material=' + material;
   });
 
   $('#material-produto').change(function() {
-    var material = <?php $categoria ?>;//$(this).val();
+    var material = $(this).val();
     var productId = $('#product-select').val();
     window.location.href = '<?php echo get_home_url(null, 'orcamento/')?>?id=' + productId + '&material=' + material;
   });
