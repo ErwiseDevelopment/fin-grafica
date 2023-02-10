@@ -212,11 +212,11 @@ get_header(); ?>
 jQuery(document).ready(function($) {
   $('#product-select').change(function() {
     var productId = $(this).val();
-    var material = $('#material-select').val();
+    var material = $('#material').val();
     window.location.href = '<?php echo get_home_url(null, 'orcamento/')?>?id=' + productId + '&material=' + material;
   });
 
-  $('#material-select').change(function() {
+  $('#material').change(function() {
     var material = $(this).val();
     var productId = $('#product-select').val();
     window.location.href = '<?php echo get_home_url(null, 'orcamento/')?>?id=' + productId + '&material=' + material;
