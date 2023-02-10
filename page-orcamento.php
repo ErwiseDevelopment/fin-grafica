@@ -58,12 +58,7 @@ get_header(); ?>
 							Fazer outro orçamento
 						</a>
 					</div>
-					<?php 
-                    $categoria = get_the_terms(get_the_ID(), 'produto-categoria');
-                    ?>
 					<div class="col-lg-3 my-3">
-					<div class="hidden" id="material-produto" <?php $categoria[0]->name ?>> </div>
-
 						<label for="product-select">Selecione o produto:</label>
 						<select id="product-select" name="product">
 							<?php
@@ -115,9 +110,8 @@ get_header(); ?>
 								if( $products->have_posts() ) :
 									while( $products->have_posts() ) : $products->the_post();
 										$product_title = get_the_title();
-										// $images = get_field( 'imagem_produto', get_the_ID() );
-										// if( $images ) :
-										// echo "<span class='js-show-product-link' data-value='" . get_the_permalink() . "'></span>";
+										$categoria = get_the_terms(get_the_ID(), 'produto-categoria');
+										var_dump($categoria)
 							?>
 							            
 										<div 
