@@ -111,7 +111,7 @@ get_header(); ?>
 									while( $products->have_posts() ) : $products->the_post();
 										$product_title = get_the_title();
 										$categoria = get_the_terms(get_the_ID(), 'produto-categoria');
-										var_dump($categoria)
+										//var_dump($categoria);
 							?>
 							            
 										<div 
@@ -195,7 +195,7 @@ get_header(); ?>
 
 	let url_string = window.location.href;
 	let url = new URL(url_string);
-	let data = url.searchParams.get("meta");
+	let data = url.searchParams.get("material");
 
 	let selectMaterial = document.querySelector( 'select[name=material]' ).getElementsByTagName( 'option' )
 	
@@ -209,7 +209,7 @@ jQuery(document).ready(function($) {
   $('#product-select').change(function() {
     var productId = $(this).val();
     var material = $('#material-produto').val();
-    window.location.href = '<?php echo get_home_url(null, 'orcamento/')?>?id=' + productId + '&material=' + material;
+    window.location.href = '<?php echo get_home_url(null, 'orcamento/')?>?id=' + productId + '&material=' + <?php echo $categoria[0]->name ?>;
   });
 
   $('#material-produto').change(function() {
