@@ -58,7 +58,9 @@ get_header(); ?>
 							Fazer outro orçamento
 						</a>
 					</div>
-
+					<?php 
+                    
+                    ?>
 					<div class="col-lg-3 my-3">
 						<label for="product-select">Selecione o produto:</label>
 						<select id="product-select" name="product">
@@ -66,13 +68,16 @@ get_header(); ?>
 							// Obtenha todos os produtos disponíveis
 							$args = array(
 								'post_type' => 'produtos',
-								'posts_per_page' => -1
+								'posts_per_page' => -1,
+								'order' => 'ASC',
 							);
 							$products = new WP_Query( $args );
 							if( $products->have_posts() ) :
 								while( $products->have_posts() ) : $products->the_post();
+								$categoria = get_the_terms(get_the_ID(), 'produto-categoria');
 							?>
 							<option value="<?php the_ID(); ?>"><?php the_title(); ?></option>
+							
 							<?php
 								endwhile;
 								wp_reset_postdata();
@@ -208,13 +213,13 @@ jQuery(document).ready(function($) {
   $('#product-select').change(function() {
     var productId = $(this).val();
     var material = $('#material-select').val();
-    window.location.href = '<?php echo get_home_url(null, 'orcamento/')?>?id=' + productId + '&material=' + material;
+    window.location.href = '<?php echo get_home_url(null, 'orcamento/')?>?id=' + productId + '&material=' + <?php get_the_terms(get_the_ID(), 'produto-categoria'); ?>;
   });
 
   $('#material-select').change(function() {
     var material = $(this).val();
     var productId = $('#product-select').val();
-    window.location.href = '<?php echo get_home_url(null, 'orcamento/')?>?id=' + productId + '&material=' + material;
+    window.location.href = '<?php echo get_home_url(null, 'orcamento/')?>?id=' + productId + '&material=' + <?php get_the_terms(get_the_ID(), 'produto-categoria'); ?>;
   });
 });
 

@@ -85,7 +85,7 @@
 
                                                     <div class="col-lg-8">
                                                         <?php 
-                                                            $cat = array(); 
+                                                        
                                                             $categoria = get_the_terms(get_the_ID(), 'produto-categoria');
                                                         ?>
                                                         <a 
