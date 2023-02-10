@@ -66,6 +66,7 @@ get_header(); ?>
 							$args = array(
 								'post_type' => 'produtos',
 								'posts_per_page' => -1,
+								'orderby' => 'title',
 								'order' => 'DSC',
 							);
 							$products = new WP_Query( $args );
