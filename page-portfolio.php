@@ -78,15 +78,11 @@ get_header(); ?>
 			<div class="col-9">
 
 				<div class="row">
-					
-					<!-- loop -->
+
 					<?php
 
 						if( isset($_GET['cat']))
 						$product_id = $_GET['cat'];
-
-						
-
 						$args = array(
 							'posts_per_page' => -1,
 							'post_type'      => 'produtos',
