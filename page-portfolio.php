@@ -25,6 +25,31 @@ get_header(); ?>
 	<div class="container-fluid">
 
 		<div class="row">
+		
+
+			<div class="col-12 px-0">
+
+				<?php
+					$alt_title = get_the_title();
+
+					the_post_thumbnail( 'post-thumbnail',
+						array(
+							'class' => 'img-fluid w-100',
+							'alt'   => $alt_title
+					));
+				?>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- end banner -->
+
+<!-- products -->
+<section class="py-5">
+
+	<div class="container">
+
+		<div class="row">
 		<div class="col-3 px-0">
 		<h4 class="u-title u-font-weight-bold text-uppercase all:u-color-folk-theme mb-0">
 				Categorias </h4>
@@ -50,31 +75,7 @@ get_header(); ?>
                             <?php endforeach; ?>
 		</div>
 
-			<div class="col-9 px-0">
-
-				<?php
-					$alt_title = get_the_title();
-
-					the_post_thumbnail( 'post-thumbnail',
-						array(
-							'class' => 'img-fluid w-100',
-							'alt'   => $alt_title
-					));
-				?>
-			</div>
-		</div>
-	</div>
-</section>
-<!-- end banner -->
-
-<!-- products -->
-<section class="py-5">
-
-	<div class="container">
-
-		<div class="row">
-
-			<div class="col-12">
+			<div class="col-9">
 
 				<div class="row">
 					
