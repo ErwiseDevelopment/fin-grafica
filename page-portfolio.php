@@ -63,7 +63,7 @@ get_header(); ?>
 
 									foreach( $product_categories as $product_category ) :
 								?>
-                                    <div class="col-6 my-1">
+                                    <div class="col-9 my-1">
 
                                         <a 
                                         class="l-product-categories__item d-block u-font-weight-semibold text-center text-decoration-none u-color-folk-white py-2"
@@ -104,7 +104,7 @@ get_header(); ?>
 							while( $products->have_posts() ) : $products->the_post();
 								$images = get_field( 'imagem_produto', get_the_ID() );
 					?>
-								<div class="col-lg-4 my-3">
+								<div class="col-lg-5 my-3">
 
 									<div class="card border-0">
 
