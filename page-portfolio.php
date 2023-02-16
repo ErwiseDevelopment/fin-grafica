@@ -85,6 +85,10 @@ get_header(); ?>
 						if( isset($_GET['cat']))
 						$product_id = $_GET['cat'];
 
+						if (!isset($product_id)) {
+							unset($args['tax_query']);
+						}
+						
 						$args = array(
 							'posts_per_page' => -1,
 							'post_type'      => 'produtos',
@@ -97,6 +101,8 @@ get_header(); ?>
 								)
 							)
 						);
+
+						
 
 						$products = new WP_Query( $args );
 
