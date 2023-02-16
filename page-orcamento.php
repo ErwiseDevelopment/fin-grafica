@@ -59,7 +59,8 @@ get_header(); ?>
 						</a>
 					</div>
 					<div class="col-lg-3 my-3">
-						<label for="product-select">Selecione o produto:</label>
+
+						<label class="l-blogs__read-more u-line-height-100 hover:u-opacity-8 d-block u-font-weight-bold text-center text-decoration-none u-color-folk-white u-bgi-folk-orange py-3 px-8" for="product-select">Selecione o produto:</label>
 						<select id="product-select" name="product">
 							<?php
 							// Obtenha todos os produtos disponíveis
