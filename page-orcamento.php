@@ -127,7 +127,7 @@ get_header(); ?>
 											?>
 															<div class="swiper-slide flex-column">
 																<img
-																class="img-fluid w-100"
+																class="l-best-sellers__product-image img-fluid w-100"
 																src="<?php echo get_sub_field( 'imagens_produto_todos' ) ?>"
 																alt="<?php the_title() ?>">
 															</div>
