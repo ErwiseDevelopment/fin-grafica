@@ -54,7 +54,7 @@ get_header(); ?>
 					<div class="col-lg-3 my-3">
 						<a 
 						class="l-blogs__read-more u-line-height-100 hover:u-opacity-8 d-block u-font-weight-bold text-center text-decoration-none u-color-folk-white u-bgi-folk-orange py-3 px-8" 
-						href="<?php echo get_home_url(null, 'categoria-produto/')?>">
+						href="<?php echo get_home_url(null, 'portfolio/')?>">
 							Fazer outro orçamento
 						</a>
 					</div>
@@ -86,9 +86,7 @@ get_header(); ?>
 								if( $products->have_posts() ) :
 									while( $products->have_posts() ) : $products->the_post();
 										$product_title = get_the_title();
-										// $images = get_field( 'imagem_produto', get_the_ID() );
-										// if( $images ) :
-										// echo "<span class='js-show-product-link' data-value='" . get_the_permalink() . "'></span>";
+
 							?>
 							            
 										<div 
