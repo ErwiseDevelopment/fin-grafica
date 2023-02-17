@@ -135,7 +135,7 @@
                     <div class="col-lg-3 my-3">
                         <a 
                         class="l-blogs__read-more u-line-height-100 hover:u-opacity-8 d-block u-font-weight-bold text-center text-decoration-none u-color-folk-white u-bgi-folk-orange py-3 px-8" 
-                        href="<?php echo get_home_url(null, 'categoria-produto/')?>">
+                        href="<?php echo get_home_url(null, 'portfolio/')?>">
                             Todos os produtos
                         </a>
                     </div>
