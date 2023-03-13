@@ -50,32 +50,69 @@ get_header(); ?>
 	<div class="container">
 
 		<div class="row">
-		<div class="col-3 px-0">
-		<h4 class="u-title u-font-weight-bold text-uppercase all:u-color-folk-theme mb-0">
-				Categorias </h4>
+
+			<div class="col-lg-3 px-0">
+				
+				<h4 class="u-title u-font-weight-bold text-center text-lg-left text-uppercase all:u-color-folk-theme mb-0">
+					Categorias
+				</h4>
 			
-		<?php
-									$product_categories = get_categories(
+				<?php
+					$product_categories = get_categories(
+						array(
+							'taxonomy' => 'produto-categoria'
+						));
+
+					foreach( $product_categories as $product_category ) :
+				?>
+						<div class="col-12 my-1">
+
+							<div class="row">
+
+								<div class="col-11">
+									<a 
+									class="l-product-categories__item d-block u-font-weight-semibold text-center text-decoration-none u-color-folk-white p-2"
+									style="word-break: break-word"
+									href="<?php echo get_home_url( null, 'portfolio?cat=' . $product_category->slug); ?>">
+										<!-- // Folhetos -->
+										<?php echo $product_category->name; ?>
+									</a>
+								</div>
+							</div>
+							
+							<div class="row justify-content-end">
+
+								<?php
+									$terms = get_terms(
 										array(
-											'taxonomy' => 'produto-categoria'
+											'taxonomy'   => 'produto-categoria',
+											'hide_empty' => true,
+											'parent'     => $product_category->term_id
 										)
 									);
 
-									foreach( $product_categories as $product_category ) :
+									foreach( $terms as $term ) :
 								?>
-                                    <div class="col-9 my-1">
+										<div class="col-11">
+											<a 
+											class="l-product-categories__item d-block u-font-weight-semibold text-center text-decoration-none u-color-folk-white p-2"
+											style="word-break: break-word"
+											href="<?php echo get_home_url( null, 'portfolio?cat=' . $term->slug); ?>">
+												<!-- // Folhetos -->
+												<?php echo $term->name; ?>
+											</a>
+										</div>
+								<?php 
+									endforeach; 
+								?>	
+							</div>
+						</div>
+                <?php 
+					endforeach; 
+				?>
+			</div>
 
-                                        <a 
-                                        class="l-product-categories__item d-block u-font-weight-semibold text-center text-decoration-none u-color-folk-white py-2"
-                                        href="<?php echo get_home_url( null, 'portfolio?cat=' . $product_category->slug); ?>">
-                                            <!-- // Folhetos -->
-                                            <?php echo $product_category->name; ?>
-                                        </a>
-                                    </div>
-                            <?php endforeach; ?>
-		</div>
-
-			<div class="col-9">
+			<div class="col-lg-9">
 
 				<div class="row">
 
