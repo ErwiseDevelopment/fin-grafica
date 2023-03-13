@@ -51,7 +51,7 @@
                                                         ?>
                                                                         <div class="swiper-slide">
                                                                             <img
-                                                                            class="img-fluid w-100"
+                                                                            class="l-best-sellers__product-image timg-fluid w-100"
                                                                             src="<?php echo get_sub_field( 'imagens_produto_todos' ) ?>"
                                                                             alt="<?php the_title() ?>">
                                                                         </div>

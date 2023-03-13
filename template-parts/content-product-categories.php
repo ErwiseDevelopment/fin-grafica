@@ -37,10 +37,10 @@
 
                                 foreach( $product_categories as $product_category ) :
                             ?>
-                                    <div class="col-6 my-1">
+                                    <div class="col-lg my-1">
 
                                         <a 
-                                        class="l-product-categories__item d-block u-font-weight-semibold text-center text-decoration-none u-color-folk-white py-2"
+                                        class="l-product-categories__item d-block u-font-weight-semibold text-center text-decoration-none u-color-folk-white p-2"
                                         href="<?php echo get_home_url( null, 'categoria-produto?cat=' . $product_category->slug); ?>">
                                             <!-- // Folhetos -->
                                             <?php echo $product_category->name; ?>
