@@ -46,47 +46,57 @@ get_header(); ?>
 <!-- content -->
 <section class="py-5">
 
-	
-		<div class="col-12">
+	<div class="col-12">
 
-				<div class="row justify-content-left">
+		<div class="row justify-content-left">
 
-					<div class="col-lg-3 my-3">
-						<a 
-						class="l-blogs__read-more u-line-height-100 hover:u-opacity-8 d-block u-font-weight-bold text-center text-decoration-none u-color-folk-white u-bgi-folk-orange py-3 px-8" 
-						href="<?php echo get_home_url(null, 'categoria-produto/')?>">
-							Fazer outro orçamento
-						</a>
-					</div>
-					<div class="col-lg-3 my-3">
+			<div class="col-lg-3 my-3">
+				<a 
+				class="l-blogs__read-more u-line-height-100 hover:u-opacity-8 d-block u-font-weight-bold text-center text-decoration-none u-color-folk-white u-bgi-folk-orange py-3 px-8" 
+				href="<?php echo get_home_url(null, 'categoria-produto/')?>">
+					Fazer outro orçamento
+				</a>
+			</div>
 
-						<!-- <label  for="product-select"></label> -->
-						<select class="l-blogs__read-more u-line-height-100 hover:u-opacity-8 d-block u-font-weight-bold text-center text-decoration-none u-color-folk-white u-bgi-folk-orange py-3 px-8" id="product-select" name="product">
-							<?php
-							// Obtenha todos os produtos disponíveis
-							$args = array(
-								'post_type' => 'produtos',
-								'posts_per_page' => -1,
-								'orderby' => 'title',
-								'order' => 'ASC',
-							);
-							$products = new WP_Query( $args );
-							if( $products->have_posts() ) :
-								while( $products->have_posts() ) : $products->the_post();
-								
-							?>
-							<option value="<?php the_ID(); ?>"><?php the_title(); ?></option>
+			<div class="col-lg-3 my-3">
+
+				<!-- <label  for="product-select"></label> -->
+				<select 
+				class="l-blogs__read-more u-line-height-100 hover:u-opacity-8 d-block u-font-weight-bold text-center text-decoration-none u-color-folk-white u-bgi-folk-orange py-3 px-8" 
+				id="product-select" 
+				name="product">
+					<?php
+						// Obtenha todos os produtos disponíveis
+						$args = array(
+							'post_type'      => 'produtos',
+							'posts_per_page' => -1,
+							'orderby'        => 'title',
+							'order'          => 'ASC',
+						);
+
+						$products = new WP_Query( $args );
+						if( $products->have_posts() ) :
+							while( $products->have_posts() ) : $products->the_post();
 							
-							<?php
-								endwhile;
-								wp_reset_postdata();
-							endif;
-							?>
-						</select>
-						</div>
-				</div>
+					?>
+								<option 
+								class="js-material-option"
+								value="<?php the_ID(); ?>">
+									<?php the_title(); ?>
+								</option>
+					<?php
+							endwhile;
+						endif;
+
+						wp_reset_postdata();
+					?>
+				</select>
+			</div>
 		</div>
-		<div class="container">
+	</div>
+
+	<div class="container">
+
 		<div class="row">
 
 			<div class="col-12">
@@ -119,7 +129,6 @@ get_header(); ?>
 										<div 
 										class="swiper-wrapper js-show-product-link"
 										data-value="<?php the_permalink(); ?>">
-
 											<?php
 												if( have_rows( 'imagem_produto' ) ) :
 													while( have_rows( 'imagem_produto' ) ) : the_row();
@@ -131,11 +140,11 @@ get_header(); ?>
 																src="<?php echo get_sub_field( 'imagens_produto_todos' ) ?>"
 																alt="<?php the_title() ?>">
 															</div>
-												<?php
-															endif;
-														endwhile;	
-													endif;
-												?>
+											<?php
+														endif;
+													endwhile;	
+												endif;
+											?>
 										</div>
 							<?php
 									endwhile;
@@ -176,7 +185,7 @@ get_header(); ?>
 		</div>
 	</div>
 </section>
-<!-- end content -->]
+<!-- end content -->
 
 <script>
 	setTimeout(function() {
@@ -191,7 +200,7 @@ get_header(); ?>
 			const showLink = document.querySelector( '.js-show-product-link' )
 			const getLink = document.querySelector( '.js-get-product-link' )
 
-			getLink.value = showLink.dataset.value
+			getLink.value = showLink.dataset.value ? showLink.dataset.value : ''
 		}
 	}, 1000)
 
@@ -207,13 +216,21 @@ get_header(); ?>
 		}
 	}
 	
-jQuery(document).ready(function($) {
-  $('#product-select').change(function() {
-    var productId = $(this).val();
-    window.location.href = '<?php echo get_home_url(null, 'orcamento/')?>?id=' + productId + '&material=' + '<?php echo $categoria[0]->name;?>';
-  });
-});
+	jQuery(document).ready(function($) {
+  		$('#product-select').change(function() {
+    		var productId = $(this).val();
+    		window.location.href = '<?php echo get_home_url(null, 'orcamento/')?>?id=' + productId + '&material=' + '<?php echo $categoria[0]->name;?>';
+  		});
+	});
 
+	if( document.getElementById( 'product-select' ) ) {
+		document.getElementById( 'product-select' ).addEventListener( 'change', function() {
+			localStorage.setItem( 'product-select', this.value)
+		})
+	}
+
+	if( localStorage.getItem( 'product-select' ) )
+		document.getElementById( 'product-select' ).value = localStorage.getItem( 'product-select' ) 
 </script>
 
 <?php endwhile; ?>
