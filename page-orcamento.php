@@ -127,7 +127,7 @@ get_header(); ?>
 											?>
 															<div class="swiper-slide flex-column">
 																<img
-																class="img-fluid w-100"
+																class="l-best-sellers__product-image img-fluid w-100"
 																src="<?php echo get_sub_field( 'imagens_produto_todos' ) ?>"
 																alt="<?php the_title() ?>">
 															</div>
@@ -169,7 +169,7 @@ get_header(); ?>
 					</div>
 
 					<div class="col-lg-8 mt-4 mt-lg-0 px-lg-5">
-						<?php echo do_shortcode( '[contact-form-7 id="647" title="Solicitação"]' ); ?>
+						<?php echo do_shortcode( '[contact-form-7 id="688" title="Solicitacao orcamento"]' ); ?>
 					</div>
 				</div>
 			</div>

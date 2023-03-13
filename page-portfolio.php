@@ -115,7 +115,7 @@ get_header(); ?>
 
 												<div class="card-img">
 													<img
-													class="img-fluid"
+													class="l-best-sellers__product-image img-fluid"
 													src="<?php echo $images[0]['imagens_produto_todos']; ?>"
 													alt="<?php the_title() ?>">
 												</div>										

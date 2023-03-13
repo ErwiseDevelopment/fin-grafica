@@ -51,7 +51,7 @@
                                                         ?>
                                                                         <div class="swiper-slide">
                                                                             <img
-                                                                            class="l-best-sellers__product-image timg-fluid w-100"
+                                                                            class="l-best-sellers__product-image img-fluid w-100"
                                                                             src="<?php echo get_sub_field( 'imagens_produto_todos' ) ?>"
                                                                             alt="<?php the_title() ?>">
                                                                         </div>
@@ -135,7 +135,7 @@
                     <div class="col-lg-3 my-3">
                         <a 
                         class="l-blogs__read-more u-line-height-100 hover:u-opacity-8 d-block u-font-weight-bold text-center text-decoration-none u-color-folk-white u-bgi-folk-orange py-3 px-8" 
-                        href="<?php echo get_home_url(null, 'categoria-produto/')?>">
+                        href="<?php echo get_home_url(null, 'portfolio/')?>">
                             Todos os produtos
                         </a>
                     </div>

@@ -1,0 +1,121 @@
+<div class="row justify-content-end">
+
+	[hidden product-title class:js-show-product-title]
+        [hidden product-link class:js-get-product-link]
+
+ 
+
+	<div class="col-lg-4 d-flex flex-column my-3">
+
+		<label> Seu nome
+		    [text* your-name] 
+		</label>
+		<label> Seu e-mail
+		    [email* your-email] 
+		</label>
+		<label> Telefone ou WhatsApp
+		    [text* telefone] 
+		</label>
+
+	</div>
+
+	<div class="col-lg-4 d-flex flex-column my-3">
+		
+		<label class="d-none"> Material
+		    [select material id:material   "Embalagem" "Encartes" "Pasta" "Folder" "Flyer" "Bloco" "Ficha/Receituário" "Agenda/Caderno" "Livreto" "Cartão" "Foto/Poster" "Marcador" "Bandeirola" "Adesivos/Rótulos" ]
+		
+		</label> 
+
+
+		<label> Gramatura
+		   [group embalagem]    		[select gramatura "250g" "275g" "300g" "350g"] 				[/group]
+		   [group Encartes] 			[select gramatura "63g" "75g" "90g" "115g" "150g" "170g"] 	[/group]     
+		   [group pasta]  				[select gramatura "250g" "275g" "300g" "350g"] [/group] 
+		   [group folder] 				[select gramatura "115g"] 									[/group] 
+		   [group flyer] 				[select gramatura "115g"] 									[/group] 
+		   [group bloco] 				[select gramatura "63g" "75g" "90g"]   						[/group]   
+		   [group ficha/receituario]	[select gramatura "63g" "75g" "90g"]   						[/group]
+		   [group agenda/caderno]		[select gramatura "75g" "90g" "115g"]  						[/group]     
+		   [group livreto] 				[select gramatura "63g" "75g" "90g" "115g" "150g" "170g"]   [/group]
+		   [group cartao] 				[select gramatura "250g" "275g" "300g" "350g"]				[/group]
+		   [group foto/poster]			[select gramatura "170g" "210g" "250g" "300g"]				[/group]
+		   [group marcador]				[select gramatura "250g" "275g" "300g" "350g"]				[/group]
+		   [group banderola]			[select gramatura "63g" "75g" "90g" "115g"]					[/group]
+		   [group adesivos/rotulos]		[select gramatura "Sem opção"]								[/group]
+		 </label>   
+
+		<label> Tipo do papel 
+		   	 [group embalagem]			[select papel "Duplex" "Triplex"] 						[/group]
+		     [group Encartes]   		[select papel "Sulfite" "Couche brilho" "Couche fosco"] [/group]
+		     [group pasta]				[select papel "Triplex"]  								[/group] 
+		     [group folder]				[select papel "Couche brilho" "Couche fosco"] 			[/group] 
+		     [group flyer] 				[select papel "Couche brilho" "Couche fosco"] 			[/group]   
+		     [group bloco] 				[select papel "Sulfite"] 								[/group] 
+		     [group ficha/receituario]  [select papel "Sulfite"] 								[/group]   
+		     [group agenda/caderno]     [select papel "Sulfite" "Couche"] 						[/group]  
+		     [group livreto]		    [select papel "Sulfite" "Couche brilho" "Couche fosco"] [/group]  
+		     [group cartao]             [select papel "Couche" "Triplex"] 						[/group]
+		     [group foto/poster]        [select papel "Couche brilho" "Couche fosco"] 			[/group]
+		     [group marcador]	        [select papel "Couche" "Triplex"] 						[/group]
+		     [group banderola]	        [select papel "Sulfite" "Couche brilho" "Couche fosco"][/group]
+		     [group adesivos/rotulos]	[select papel "Adesivo brilho" "Adesivo fosco" "Vinil"][/group] 
+		</label>    
+		<div class="row">
+			<div class="col-lg-5">
+
+				<label class="w-100"> Frente 
+					[select frente "0" "1" "2" "3" "4"] 
+				</label>
+	
+			</div>
+			<div class="col-lg-2 d-flex justify-content-center align-items-end pb-3">
+				<p class= "mb-0">X</p>
+			</div>
+			<div class="col-lg-5 ">
+	
+				<label class="w-100"> Verso 
+					[select verso"0" "1" "2" "3" "4"] 
+				</label>
+	
+			</div>
+		</div>
+	</div>		
+		<div class="col-lg-4 d-flex flex-column my-3">
+            <label> Acabamentos 
+                [group embalagem]			[select acabamento  "Duplex" "Triplex"] 						[/group]
+                [group Encartes]   		    [select acabamento  "Corte"] [/group]
+                [group pasta]				[select acabamento  "Estampa" "Plastificação" "Cola" "Furo" "Verniz UV"]  								[/group] 
+                [group folder]				[select acabamento  "Corte" "Dobra"] 			[/group] 
+                [group flyer] 				[select acabamento  "Corte"] 			[/group]   
+                [group bloco] 				[select acabamento  "Corte" "Cola" "Furo" "Grampo" "Espiral" "Wire-o"] 								[/group] 
+                [group ficha/receituario]   [select acabamento  "Corte" "Cola" "Grampo" ] 								[/group]   
+                [group agenda/caderno]      [select acabamento  "Miolo - Corte" "Miolo - Espiral" "Miolo - Furo" "Miolo - Cola" "Capa dura - Corte" "Capa dura - Espiral" "Capa dura - Wire-o" "Capa dura - Furo" "Capa dura - Cola" "Capa dura - Plastificação" "Capa dura - Verniz - UV"] 						[/group]  
+                [group livreto]		        [select acabamento  "Corte" "Grampo" "Dobra"] [/group]  
+                [group cartao]              [select acabamento  "Corte" "Estampa" "Plastificação" "Verniz - UV"] 						[/group]
+                [group foto/poster]         [select acabamento  "Corte" "Plastificação"] 			[/group]
+                [group marcador]	        [select acabamento  "Corte" "Furo" "Estampa" "Plastificação" "Verniz - UV"] 						[/group]
+                [group banderola]	        [select acabamento  "Corte" "Estampa" "Cola"][/group]
+                [group adesivos/rotulos]	[select acabamento  "Corte" "Estampa"][/group] 
+            </label>  
+
+			<label> Tamanho
+			[text tamanho] </label>
+
+
+			<label> Quantidade
+			[number qnt min:1 max:99 "1"]
+			</label>
+		</div>
+		<div class="col-lg-12 d-flex flex-column my-3">
+			<label> Escreva uma mensagem
+				[textarea mensagem] 
+			</label>
+		</div>
+
+
+
+			<div class="col-lg-6 d-flex flex-column my-6">
+				[submit "Enviar"]
+			</div>
+	
+</div>
