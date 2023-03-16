@@ -15,6 +15,8 @@
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <!-- fontmontserrat -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
