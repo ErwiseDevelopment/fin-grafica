@@ -82,7 +82,7 @@
 	</div>		
 		<div class="col-lg-4 d-flex flex-column my-3">
             <label> Acabamentos 
-                [group embalagem]			[select acabamento  "Duplex" "Triplex"] 						[/group]
+                [group embalagem]			[select acabamento  "Corte" "Estampa" "Cola" "Plastificação" "Verniz UV" "Triplex"] 						[/group]
                 [group Encartes]   		    [select acabamento  "Corte"] [/group]
                 [group pasta]				[select acabamento  "Estampa" "Plastificação" "Cola" "Furo" "Verniz UV"]  								[/group] 
                 [group folder]				[select acabamento  "Corte" "Dobra"] 			[/group] 

@@ -81,9 +81,9 @@ get_header(); ?>
 									</div>
 								</div>
 								
-								<div class="row justify-content-end">
+								<!-- <div class="row justify-content-end">
 
-									<?php
+									<php
 										$terms = get_terms(
 											array(
 												'taxonomy'   => 'produto-categoria',
@@ -98,15 +98,15 @@ get_header(); ?>
 												<a 
 												class="l-product-categories__item d-block u-font-weight-semibold text-center text-decoration-none u-color-folk-white p-2"
 												style="word-break: break-word"
-												href="<?php echo get_home_url( null, 'portfolio?cat=' . $term->slug); ?>">
-													<!-- // Folhetos -->
-													<?php echo $term->name; ?>
+												href="<php echo get_home_url( null, 'portfolio?cat=' . $term->slug); ?>">
+													
+													<php echo $term->name; ?>
 												</a>
 											</div>
-									<?php 
+									<php 
 										endforeach; 
 									?>	
-								</div>
+								</div> -->
 							</div>
                 <?php 
 						endif;

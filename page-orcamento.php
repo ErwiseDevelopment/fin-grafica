@@ -50,7 +50,7 @@ get_header(); ?>
 
 		<div class="row justify-content-left">
 
-			<div class="col-lg-3 my-3">
+			<div class="col-lg-4 my-4">
 				<a 
 				class="l-blogs__read-more u-line-height-100 hover:u-opacity-8 d-block u-font-weight-bold text-center text-decoration-none u-color-folk-white u-bgi-folk-orange py-3 px-8" 
 				href="<?php echo get_home_url(null, 'categoria-produto/')?>">
