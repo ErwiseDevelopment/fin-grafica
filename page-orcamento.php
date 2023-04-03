@@ -46,55 +46,6 @@ get_header(); ?>
 <!-- content -->
 <section class="py-5">
 
-	<div class="col-12">
-
-		<div class="row justify-content-left">
-
-			<div class="col-lg-4 my-4">
-				<a 
-				class="l-blogs__read-more u-line-height-100 hover:u-opacity-8 d-block u-font-weight-bold text-center text-decoration-none u-color-folk-white u-bgi-folk-orange py-3 px-8" 
-				href="<?php echo get_home_url(null, 'categoria-produto/')?>">
-					Fazer outro orçamento
-				</a>
-			</div>
-
-			<div class="col-lg-3 my-3">
-
-				<!-- <label  for="product-select"></label> -->
-				<select 
-				class="l-blogs__read-more u-line-height-100 hover:u-opacity-8 d-block u-font-weight-bold text-center text-decoration-none u-color-folk-white u-bgi-folk-orange py-3 px-8" 
-				id="product-select" 
-				name="product">
-					<?php
-						// Obtenha todos os produtos disponíveis
-						$args = array(
-							'post_type'      => 'produtos',
-							'posts_per_page' => -1,
-							'orderby'        => 'title',
-							'order'          => 'ASC',
-						);
-
-						$products = new WP_Query( $args );
-						if( $products->have_posts() ) :
-							while( $products->have_posts() ) : $products->the_post();
-							
-					?>
-								<option 
-								class="js-material-option"
-								value="<?php the_ID(); ?>">
-									<?php the_title(); ?>
-								</option>
-					<?php
-							endwhile;
-						endif;
-
-						wp_reset_postdata();
-					?>
-				</select>
-			</div>
-		</div>
-	</div>
-
 	<div class="container">
 
 		<div class="row">
@@ -103,7 +54,7 @@ get_header(); ?>
 
 				<div class="row justify-content-left">
 
-					<div class="col-lg-3 my-3">
+					<div class="col-lg-4 my-4">
 						<a 
 						class="l-blogs__read-more u-line-height-100 hover:u-opacity-8 d-block u-font-weight-bold text-center text-decoration-none u-color-folk-white u-bgi-folk-orange py-3 px-8" 
 						href="<?php echo get_home_url(null, 'categoria-produto/')?>">
