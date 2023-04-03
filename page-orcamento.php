@@ -101,6 +101,61 @@ get_header(); ?>
 
 			<div class="col-12">
 
+				<div class="row justify-content-left">
+
+					<div class="col-lg-3 my-3">
+						<a 
+						class="l-blogs__read-more u-line-height-100 hover:u-opacity-8 d-block u-font-weight-bold text-center text-decoration-none u-color-folk-white u-bgi-folk-orange py-3 px-8" 
+						href="<?php echo get_home_url(null, 'categoria-produto/')?>">
+							Fazer outro orçamento
+						</a>
+					</div>
+
+					<div class="col-lg-3 my-3">
+
+						<!-- <label  for="product-select"></label> -->
+						<form 
+						id="form-find-product"
+						method="GET"
+						action="<?php echo get_home_url( null, 'orcamento' ) ?>"
+						autocomplete="off">
+							<select 
+							class="l-blogs__read-more u-line-height-100 hover:u-opacity-8 d-block u-font-weight-bold text-center text-decoration-none u-color-folk-white u-bgi-folk-orange py-3 px-8" 
+							id="product-select" 
+							name="id">
+								<?php
+									// Obtenha todos os produtos disponíveis
+									$args = array(
+										'post_type'      => 'produtos',
+										'posts_per_page' => -1,
+										'orderby'        => 'title',
+										'order'          => 'ASC',
+									);
+
+									$products = new WP_Query( $args );
+
+									if( $products->have_posts() ) :
+										while( $products->have_posts() ) : $products->the_post();
+								?>
+											<option 
+											class="js-material-option"
+											value="<?php the_ID(); ?>">
+												<?php the_title(); ?>
+											</option>
+								<?php
+										endwhile;
+									endif;
+
+									wp_reset_postdata();
+								?>
+							</select>
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-12">
+
 				<div class="row">
 
 					<div class="col-lg-4">
@@ -123,7 +178,6 @@ get_header(); ?>
 									while( $products->have_posts() ) : $products->the_post();
 										$product_title = get_the_title();
 										$categoria = get_the_terms(get_the_ID(), 'produto-categoria');
-										//var_dump($categoria);
 							?>
 							            
 										<div 
@@ -153,7 +207,6 @@ get_header(); ?>
 								wp_reset_query();
 							?>
 						</div>
-
 
 						<div class="row">
 
@@ -204,24 +257,27 @@ get_header(); ?>
 		}
 	}, 1000)
 
-	let url_string = window.location.href;
-	let url = new URL(url_string);
-	let data = url.searchParams.get("material");
-
+	// let url_string = window.location.href;
+	// let url = new URL(url_string);
+	// let data = url.searchParams.get("mat");
 	let selectMaterial = document.querySelector( 'select[name=material]' ).getElementsByTagName( 'option' )
 	
-	for(let select of selectMaterial) {
-		if(select.innerText == data) {
-			document.querySelector( 'select[name=material]' ).value = select.innerText
+	localStorage.setItem( 'category-current', '<?php echo $categoria[0]->name; ?>')
+
+	if( localStorage.getItem( 'category-current' ) ) {
+		let categoryCurrent = localStorage.getItem( 'category-current' )
+
+		for( let select of selectMaterial ) {
+			if( select.value == categoryCurrent ) 
+				document.querySelector( 'select[name=material]' ).value = select.value
 		}
+	} else {
+		console.log( 'ELSE')
 	}
-	
-	jQuery(document).ready(function($) {
-  		$('#product-select').change(function() {
-    		var productId = $(this).val();
-    		window.location.href = '<?php echo get_home_url(null, 'orcamento/')?>?id=' + productId + '&material=' + '<?php echo $categoria[0]->name;?>';
-  		});
-	});
+
+	document.getElementById( 'product-select' ).addEventListener( 'change', function() {
+		document.getElementById( 'form-find-product' ).submit()
+	})
 
 	if( document.getElementById( 'product-select' ) ) {
 		document.getElementById( 'product-select' ).addEventListener( 'change', function() {
